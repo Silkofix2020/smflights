@@ -181,6 +181,9 @@ const discoverCards = [
     margin-left: auto;
     margin-right: auto;
   }
+  @media (max-width: 760px) {
+    padding: 300px 0 0 0;
+  }
 }
 .some,
 .discover {
