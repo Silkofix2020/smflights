@@ -1,0 +1,18 @@
+@mixin montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin nunito-sans {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+$yellow-700: #ffa200;
+$yellow-900: #ff7100;
+$gradient-start: #ff7e5f;
+$gradient-end: #feb47b;
