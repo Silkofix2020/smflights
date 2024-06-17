@@ -21,7 +21,7 @@
       <ul class="footer__list">
         <h3 class="footer__title">General</h3>
         <li class="footer__item">
-          <NuxtLink class="footer__link" to="/terms">Terms of Service</NuxtLink>
+          <NuxtLink class="footer__link" to="/privacy">Privacy Policy</NuxtLink>
         </li>
         <li>
           <NuxtLink class="footer__link" to="/contact">Contact us</NuxtLink>
