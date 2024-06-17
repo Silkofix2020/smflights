@@ -59,7 +59,6 @@ const emit = defineEmits(["update:modelValue"]);
 
 const isFocused = ref(false);
 const internalValue = ref(props.modelValue);
-const inputType = ref("date");
 
 const handleFocus = () => {
   isFocused.value = true;
@@ -82,14 +81,16 @@ watch(internalValue, (newValue) => {
 
 <style lang="scss" scoped>
 input {
-  width: 100%;
-  max-width: 170px;
+  width: 160px;
   font-size: 14px;
   padding: 8px 0 8px 10px;
   border: 0.03125em solid #b9b9b9;
   border-radius: 5px;
   &:focus {
     outline-color: #feb47b;
+  }
+  @media (max-width: 760px) {
+    width: 300px;
   }
 }
 

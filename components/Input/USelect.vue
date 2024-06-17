@@ -122,6 +122,9 @@ const totalPassengers = computed(
   &:focus {
     outline-color: #feb47b;
   }
+  @media (max-width: 760px) {
+    max-width: 300px;
+  }
 }
 
 .passenger-label {

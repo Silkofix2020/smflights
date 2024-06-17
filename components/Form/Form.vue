@@ -104,7 +104,7 @@ const handleSubmit = (event) => {
 @import "../assets/scss/variables.scss";
 
 .form {
-  width: 100%;
+  width: 99%;
   max-width: 1108px;
   display: flex;
   flex-direction: column;
@@ -124,10 +124,17 @@ const handleSubmit = (event) => {
     border-bottom: 0.03125em solid rgba($color: #a4a4a4, $alpha: 0.25);
   }
   &-wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 5px;
+    @media (max-width: 760px) {
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
   }
   &__inputs {
     display: flex;
@@ -151,7 +158,7 @@ const handleSubmit = (event) => {
     height: 39px;
     border: none;
     border-radius: 5px;
-    padding: 5px 60px;
+    padding: 5px 50px;
     background-color: #feb47b;
     color: #fff;
     cursor: pointer;
