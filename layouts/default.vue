@@ -2,9 +2,12 @@
   <div class="wrapper">
     <NuxtPage />
   </div>
+  <SpeedInsights />
 </template>
 
-<script setup></script>
+<script setup>
+import { SpeedInsights } from "@vercel/speed-insights/nuxt";
+</script>
 
 <style lang="scss">
 .wrapper {
