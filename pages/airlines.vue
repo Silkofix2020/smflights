@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import PartnerCard from "/components/card/PartnerCard.vue";
+import PartnerCard from "/components/Card/PartnerCard.vue";
 
 const data = ref([]);
 

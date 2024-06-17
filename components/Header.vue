@@ -37,7 +37,6 @@ import BurgerMenu from "./BurgerMenu.vue";
 
 .header {
   width: 100%;
-  max-width: 1440px;
   overflow: hidden;
   color: #fff;
   text-shadow: 7px 8px 12px rgba(0, 0, 0, 0.21);
