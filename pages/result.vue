@@ -27,6 +27,7 @@ useHead({
 .content {
   position: absolute;
   width: 100%;
+  height: 10px;
   top: 100px;
   left: 0;
   right: 0;
