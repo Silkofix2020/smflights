@@ -1,8 +1,31 @@
 <template>
   <main>
-    <section class="book">
-      <Form class="book__form" />
-    </section>
+    <Hero>
+      <section class="book">
+        <div class="book-cta">
+          <h2 class="book-cta__title">
+            Book cheap flights and save up to 50% OFF
+          </h2>
+
+          <div class="book-cta__advantages">
+            <div class="book-cta__item">
+              <span class="book-cta__item--gold">30+</span> quotes in seconds
+            </div>
+            <div class="book-cta__item">
+              <span class="book-cta__item--gold">$287+</span> savings on each
+              ticket
+            </div>
+            <div class="book-cta__item">
+              <span class="book-cta__item--gold">100%</span> free service
+            </div>
+          </div>
+        </div>
+
+        <div class="book__wrapper">
+          <Form class="book__form" />
+        </div>
+      </section>
+    </Hero>
     <div class="some">
       <div class="some__header">
         <div class="some__title-group">
@@ -168,18 +191,35 @@ const discoverCards = [
 
 <style lang="scss">
 .book {
-  position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: 1108px;
-  padding: 45px 0 0 0;
-  &__form {
-    position: absolute;
-    top: -130px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+  &-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+    padding: 20px 0;
+    &__advantages {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+    &__item {
+      width: calc(100% / 3);
+      font-size: 18px;
+      text-align: center;
+      border-right: 1px solid #ffffff;
+      padding: 0 20px;
+      &:nth-child(3) {
+        border: none;
+      }
+      &--gold {
+        color: #ffd586;
+        font-weight: 700;
+      }
+    }
   }
   @media (max-width: 760px) {
     padding: 300px 0 0 0;

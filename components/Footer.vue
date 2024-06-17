@@ -33,10 +33,6 @@
 
 <script setup>
 import UContainer from "./Container/UContainer.vue";
-
-const passengers = [{}];
-const business = [{}];
-const general = [{}];
 </script>
 
 <style lang="scss">
@@ -49,6 +45,11 @@ const general = [{}];
     flex-wrap: wrap;
 
     padding: 36px 0;
+
+    @media (max-width: 760px) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
   &__title {
     font-size: 16px;

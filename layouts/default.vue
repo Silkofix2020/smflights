@@ -1,7 +1,6 @@
 <template>
-  <div class="wrapper">
-    <NuxtPage />
-  </div>
+  <NuxtPage />
+
   <SpeedInsights />
 </template>
 
@@ -9,12 +8,4 @@
 import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 </script>
 
-<style lang="scss">
-.wrapper {
-  padding: 0;
-  background-image: url(/public/img/header-bg.webp);
-  height: 570px;
-  background-size: cover;
-  background-position: center;
-}
-</style>
+<style lang="scss"></style>

@@ -39,6 +39,10 @@ onMounted(async () => {
   margin: 0 auto;
   padding: 10px;
   color: #7e7e7e;
+  &__table {
+    width: 100%;
+    overflow: auto;
+  }
 }
 .content h1,
 .content h2,

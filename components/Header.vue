@@ -11,7 +11,6 @@
         <BurgerMenu />
       </nav>
     </div>
-    <h1 class="header__title">We are here for you.</h1>
   </header>
 </template>
 
@@ -23,14 +22,13 @@ import BurgerMenu from "./BurgerMenu.vue";
 @import "../assets/scss/variables.scss";
 
 .wrap {
-  position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: 1440px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 70px 120px 0;
+  padding: 4px 30px;
 
   @media (max-width: 760px) {
     padding: 10px 18px 0;
@@ -38,32 +36,23 @@ import BurgerMenu from "./BurgerMenu.vue";
 }
 
 .header {
-  position: relative;
-  height: 570px;
+  width: 100%;
+  max-width: 1440px;
   overflow: hidden;
   color: #fff;
-
+  text-shadow: 7px 8px 12px rgba(0, 0, 0, 0.21);
+  background-color: #f5f8ff;
   &__logo {
     @include nunito-sans;
-    font-size: 40px;
+    font-size: 30px;
     text-decoration: none;
-    font-weight: 200;
-    color: #fff;
+    font-weight: 400;
+    color: #000000;
     &--bold {
       font-weight: 700;
       background: linear-gradient(to right, #ff7e5f, #feb47b);
       background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &__title {
-    text-align: end;
-    padding: 151px 120px 0;
-    text-shadow: 7px 8px 12px rgba(0, 0, 0, 0.21);
-
-    @media (max-width: 760px) {
-      padding: 225px 15px 0;
     }
   }
 }
