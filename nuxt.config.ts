@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   plugins: ["~/plugins/v-click-outside.js", "~/plugins/loading.js"],
   nitro: {
     prerender: {
-      routes: ["/privacy"],
+      routes: ["/"],
     },
   },
   modules: ["@pinia/nuxt"],
