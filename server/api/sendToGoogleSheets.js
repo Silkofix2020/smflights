@@ -1,4 +1,4 @@
-import { eventHandler, send } from "h3";
+import { eventHandler, readBody, send } from "h3";
 
 export default eventHandler(async (req, res) => {
   if (req.method === "OPTIONS") {
@@ -25,7 +25,19 @@ export default eventHandler(async (req, res) => {
         }
       );
 
-      const result = await response.json();
+      const text = await response.text(); // Изменяем на текст для отладки
+      let result;
+
+      try {
+        result = JSON.parse(text);
+      } catch (jsonError) {
+        console.error("Error parsing JSON:", jsonError);
+        console.error("Response text:", text);
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        send(res, 500, { error: "Error parsing JSON", details: text });
+        return;
+      }
+
       res.setHeader("Access-Control-Allow-Origin", "*");
       send(res, 200, result);
     } catch (error) {
