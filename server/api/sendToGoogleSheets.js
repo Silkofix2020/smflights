@@ -12,6 +12,7 @@ export default eventHandler(async (req, res) => {
 
   if (req.method === "POST") {
     const data = await readBody(req);
+    console.log("Received data:", data);
 
     try {
       const response = await fetch(
@@ -26,6 +27,7 @@ export default eventHandler(async (req, res) => {
       );
 
       const text = await response.text();
+      console.log("Google Script response:", text);
       let result;
 
       try {
