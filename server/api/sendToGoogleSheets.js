@@ -1,11 +1,12 @@
-import { eventHandler, readBody, send } from "h3";
+import { eventHandler, readBody } from "h3";
 
 export default eventHandler(async (req, res) => {
   if (req.method === "OPTIONS") {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    res.statusCode = 200;
+    res.writeHead(200, {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    });
     res.end();
     return;
   }
@@ -35,21 +36,33 @@ export default eventHandler(async (req, res) => {
       } catch (jsonError) {
         console.error("Error parsing JSON:", jsonError);
         console.error("Response text:", text);
-        res.setHeader("Access-Control-Allow-Origin", "*");
-        send(res, 500, { error: "Error parsing JSON", details: text });
+        res.writeHead(500, {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        });
+        res.end(JSON.stringify({ error: "Error parsing JSON", details: text }));
         return;
       }
 
-      res.setHeader("Access-Control-Allow-Origin", "*");
-      send(res, 200, result);
+      res.writeHead(200, {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      });
+      res.end(JSON.stringify(result));
     } catch (error) {
       console.error("Error sending data:", error);
-      res.setHeader("Access-Control-Allow-Origin", "*");
-      send(res, 500, { error: "Error sending data" });
+      res.writeHead(500, {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      });
+      res.end(JSON.stringify({ error: "Error sending data" }));
     }
   } else {
-    res.setHeader("Allow", "POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    send(res, 405, `Method ${req.method} Not Allowed`);
+    res.writeHead(405, {
+      Allow: "POST, OPTIONS",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    });
+    res.end(JSON.stringify({ error: `Method ${req.method} Not Allowed` }));
   }
 });

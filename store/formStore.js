@@ -3,8 +3,8 @@ import { defineStore } from "pinia";
 export const useFormStore = defineStore("form", {
   state: () => ({
     flightType: "",
-    from: "Moscow",
-    to: "Tula",
+    from: "",
+    to: "",
     departureDate: "",
     returnDate: "",
     adults: "",

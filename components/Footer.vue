@@ -4,7 +4,7 @@
       <ul class="footer__list">
         <h3 class="footer__title">Passengers</h3>
         <li class="footer__item">
-          <NuxtLink class="footer__link" to="/airlines">Airlines</NuxtLink>
+          <NuxtLink class="footer__link" to="">Airlines</NuxtLink>
         </li>
       </ul>
       <ul class="footer__list">
@@ -13,9 +13,7 @@
           <NuxtLink class="footer__link" to="/about">About us</NuxtLink>
         </li>
         <li>
-          <NuxtLink class="footer__link" to="/partnerships"
-            >Partnerships</NuxtLink
-          >
+          <NuxtLink class="footer__link" to="">Partnerships</NuxtLink>
         </li>
       </ul>
       <ul class="footer__list">
@@ -24,7 +22,7 @@
           <NuxtLink class="footer__link" to="/privacy">Privacy Policy</NuxtLink>
         </li>
         <li>
-          <NuxtLink class="footer__link" to="/contact">Contact us</NuxtLink>
+          <NuxtLink class="footer__link" to="">Contact us</NuxtLink>
         </li>
       </ul>
     </UContainer>

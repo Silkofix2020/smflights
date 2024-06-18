@@ -1,14 +1,6 @@
 <template>
   <Header />
-  <div class="container1">
-    <p>{{ formStore.from }}</p>
-    <p>{{ formStore.to }}</p>
-    <p>{{ formStore.departureDate }}</p>
-    <p>{{ formStore.returnDate }}</p>
-    <p>{{ formStore.adults }}</p>
-    <p>{{ formStore.children }}</p>
-    <p>{{ formStore.infants }}</p>
-  </div>
+
   <Footer />
 </template>
 <script setup>
