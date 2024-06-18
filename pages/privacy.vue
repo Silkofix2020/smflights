@@ -16,6 +16,11 @@ useHead({
       content:
         "SmFlights privacy policy, our privacy policy rules, Privacy policy, personal information, privacy protection, secure information, personal data collection policy",
     },
+    {
+      name: "Description",
+      content:
+        "SmFlights privacy policy, our privacy policy rules, Privacy policy, personal information, privacy protection, secure information, personal data collection policy",
+    },
   ],
 });
 
