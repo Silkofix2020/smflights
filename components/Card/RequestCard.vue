@@ -83,7 +83,7 @@ const sendToGoogleSheets = async () => {
     });
 
     const response = await $fetch(
-      "https://script.google.com/macros/s/AKfycbxPZb8IW0SYulTCJI98MSZkrFz7WctgleV1EEzcfKKNq2f3GfYG70Ksx11LkzCuJVWs/exec",
+      "https://script.google.com/macros/s/AKfycbyUJ4SBIsL0OJaKNij97aNdI97sbth5EC7lCONOIKi0wiqUOW23LSBUxlb51gHSOWWJ0Q/exec",
       {
         method: "POST",
         body: {
