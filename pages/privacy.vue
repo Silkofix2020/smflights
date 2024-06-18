@@ -12,12 +12,12 @@ useHead({
   title: "SmFlights: Privacy Policy",
   meta: [
     {
-      name: "Keywords",
+      name: "keywords",
       content:
         "SmFlights privacy policy, our privacy policy rules, Privacy policy, personal information, privacy protection, secure information, personal data collection policy",
     },
     {
-      name: "Description",
+      name: "description",
       content:
         "SmFlights privacy policy, our privacy policy rules, Privacy policy, personal information, privacy protection, secure information, personal data collection policy",
     },
