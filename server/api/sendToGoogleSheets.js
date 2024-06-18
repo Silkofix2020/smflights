@@ -25,7 +25,7 @@ export default eventHandler(async (req, res) => {
         }
       );
 
-      const text = await response.text(); // Изменяем на текст для отладки
+      const text = await response.text();
       let result;
 
       try {
