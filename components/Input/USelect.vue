@@ -1,37 +1,39 @@
 <template>
-  <div class="passenger-selector">
+  <div class="passenger-selector" v-click-outside="closePopover">
     <div class="passenger-label" @click="togglePopover">
       {{ totalPassengers }} Passengers
     </div>
-    <div v-if="open" class="popover">
-      <div class="passenger-group">
-        <div>Adults</div>
-        <div class="counter">
-          <button type="button" @click="decreaseCount('adults')">-</button>
-          <span>{{ modelValue.adults }}</span>
-          <button type="button" @click="increaseCount('adults')">+</button>
+    <transition name="slide"
+      ><div v-if="open" class="popover">
+        <div class="passenger-group">
+          <div>Adults</div>
+          <div class="counter">
+            <button type="button" @click="decreaseCount('adults')">-</button>
+            <span>{{ modelValue.adults }}</span>
+            <button type="button" @click="increaseCount('adults')">+</button>
+          </div>
         </div>
-      </div>
-      <div class="passenger-group">
-        <div>Children</div>
-        <div class="counter">
-          <button type="button" @click="decreaseCount('children')">-</button>
-          <span>{{ modelValue.children }}</span>
-          <button type="button" @click="increaseCount('children')">+</button>
+        <div class="passenger-group">
+          <div>Children</div>
+          <div class="counter">
+            <button type="button" @click="decreaseCount('children')">-</button>
+            <span>{{ modelValue.children }}</span>
+            <button type="button" @click="increaseCount('children')">+</button>
+          </div>
         </div>
-      </div>
-      <div class="passenger-group">
-        <div>Infants</div>
-        <div class="counter">
-          <button type="button" @click="decreaseCount('infants')">-</button>
-          <span>{{ modelValue.infants }}</span>
-          <button type="button" @click="increaseCount('infants')">+</button>
+        <div class="passenger-group">
+          <div>Infants</div>
+          <div class="counter">
+            <button type="button" @click="decreaseCount('infants')">-</button>
+            <span>{{ modelValue.infants }}</span>
+            <button type="button" @click="increaseCount('infants')">+</button>
+          </div>
         </div>
-      </div>
-      <UButton type="button" class="ok-button" @click="closePopover"
-        >OK</UButton
-      >
-    </div>
+        <UButton type="button" class="ok-button" @click="closePopover"
+          >OK</UButton
+        >
+      </div></transition
+    >
   </div>
 </template>
 
@@ -187,5 +189,34 @@ const totalPassengers = computed(
   &:hover {
     background: #ff6f00;
   }
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.slide-enter-active {
+  animation: slide-in 0.3s ease-out;
+}
+
+.slide-leave-active {
+  animation: slide-out 0.3s ease-out;
 }
 </style>

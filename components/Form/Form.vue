@@ -5,7 +5,7 @@
         <input
           id="round-trip"
           name="flightType"
-          value="round-trip"
+          value="Round-trip"
           type="radio"
           v-model="flightType"
         />
@@ -15,7 +15,7 @@
         <input
           id="one-way"
           name="flightType"
-          value="one-way"
+          value="One-way"
           type="radio"
           v-model="flightType"
         />
@@ -62,7 +62,7 @@ const from = ref("");
 const to = ref("");
 const departureDate = ref("");
 const returnDate = ref("");
-const flightType = ref("round-trip");
+const flightType = ref("Round-trip");
 const passengerInfo = ref({
   adults: 2,
   children: 0,

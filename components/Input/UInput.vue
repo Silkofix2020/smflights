@@ -18,7 +18,7 @@
       v-model="internalValue"
       :placeholder="placeholder"
       :required="required"
-      :disabled="disabled || flightType === 'one-way'"
+      :disabled="disabled || flightType === 'One-way'"
       @focus="handleFocus"
       @blur="handleBlur"
     />
@@ -103,6 +103,7 @@ label {
   font-size: 12px;
   color: #616161;
   transition: 0.3s; // плавный переход цвета
+  pointer-events: none;
 }
 
 /* Добавляем стили для label, когда input в фокусе */

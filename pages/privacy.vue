@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div v-html="policyMarkdown" class="content"></div>
+  <div v-html="policyMarkdown" class="privacy__content"></div>
   <Footer />
 </template>
 
@@ -33,7 +33,7 @@ onMounted(async () => {
 </script>
 
 <style lang="scss">
-.content {
+.privacy__content {
   width: 100%;
   max-width: 1108px;
   margin: 0 auto;
@@ -44,12 +44,12 @@ onMounted(async () => {
     overflow: auto;
   }
 }
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
+.privacy__content h1,
+.privacy__content h2,
+.privacy__content h3,
+.privacy__content h4,
+.privacy__content h5,
+.privacy__content h6 {
   margin: 5px 0;
   color: #000000;
 }

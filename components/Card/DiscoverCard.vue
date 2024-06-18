@@ -98,8 +98,4 @@ const backgroundImageClass = computed(() => {
     align-self: flex-end;
   }
 }
-.full-width {
-  width: calc(100% - 20px); /* Full width minus the margins */
-  border: 2px dashed black;
-}
 </style>

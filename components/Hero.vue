@@ -1,10 +1,14 @@
 <template>
-  <div class="hero">
+  <div class="hero" :class="class">
     <slot />
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  class: String,
+});
+</script>
 
 <style lang="scss">
 .hero {
