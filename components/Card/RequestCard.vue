@@ -68,39 +68,22 @@ watch(
 
 const sendToGoogleSheets = async () => {
   try {
-    console.log("Sending data:", {
-      flightType: formStore.flightType,
-      from: formStore.from,
-      to: formStore.to,
-      departureDate: formStore.departureDate,
-      returnDate: formStore.returnDate,
-      adults: formStore.adults,
-      children: formStore.children,
-      infants: formStore.infants,
-      clientEmail: formStore.clientEmail,
-      clientPhone: formStore.clientPhone,
-      clientName: formStore.clientName,
+    const response = await $fetch("/api/sendToGoogleSheets", {
+      method: "POST",
+      body: {
+        flightType: formStore.flightType,
+        from: formStore.from,
+        to: formStore.to,
+        departureDate: formStore.departureDate,
+        returnDate: formStore.returnDate,
+        adults: formStore.adults,
+        children: formStore.children,
+        infants: formStore.infants,
+        clientEmail: formStore.clientEmail,
+        clientPhone: formStore.clientPhone,
+        clientName: formStore.clientName,
+      },
     });
-
-    const response = await $fetch(
-      "https://script.google.com/macros/s/AKfycbyUJ4SBIsL0OJaKNij97aNdI97sbth5EC7lCONOIKi0wiqUOW23LSBUxlb51gHSOWWJ0Q/exec",
-      {
-        method: "POST",
-        body: {
-          flightType: formStore.flightType,
-          from: formStore.from,
-          to: formStore.to,
-          departureDate: formStore.departureDate,
-          returnDate: formStore.returnDate,
-          adults: formStore.adults,
-          children: formStore.children,
-          infants: formStore.infants,
-          clientEmail: formStore.clientEmail,
-          clientPhone: formStore.clientPhone,
-          clientName: formStore.clientName,
-        },
-      }
-    );
 
     console.log("Data sent successfully:", response);
   } catch (error) {
