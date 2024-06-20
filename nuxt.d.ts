@@ -9,5 +9,11 @@ declare module "nuxt/schema" {
         send_page_view?: boolean;
       };
     };
+    robots?: {
+      UserAgent: string;
+      Disallow?: string | string[];
+      Allow?: string | string[];
+      Sitemap?: string;
+    };
   }
 }

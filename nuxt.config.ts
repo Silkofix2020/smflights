@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "@nuxtjs/sitemap", "nuxt-gtag"],
+  modules: ["@pinia/nuxt", "@nuxtjs/sitemap", "nuxt-gtag", "@nuxtjs/robots"],
   gtag: {
     id: "G-453R0PVPBW",
     config: {
@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   },
   sitemap: {
     xsl: false,
-    hostname: "https://yourwebsite.com",
+    hostname: "https://smflights.vercel.app",
     gzip: true,
     routes: [
       "/about",
@@ -51,6 +51,12 @@ export default defineNuxtConfig({
       "/privacy",
       // дополнительные маршруты
     ],
+  },
+  robots: {
+    UserAgent: "*",
+    Disallow: "/admin",
+    Allow: "/",
+    Sitemap: "https://smflights.vercel.app/sitemap.xml",
   },
   plugins: ["~/plugins/v-click-outside.js", "~/plugins/loading.js"],
   nitro: {

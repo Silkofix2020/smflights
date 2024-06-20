@@ -1,31 +1,34 @@
 <template>
   <footer class="footer">
     <UContainer :class="'footer__container'">
-      <ul class="footer__list">
-        <h3 class="footer__title">Passengers</h3>
-        <li class="footer__item">
-          <NuxtLink class="footer__link" to="">Airlines</NuxtLink>
-        </li>
-      </ul>
-      <ul class="footer__list">
-        <h3 class="footer__title">Business and Community</h3>
-        <li class="footer__item">
-          <NuxtLink class="footer__link" to="/about">About us</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink class="footer__link" to="">Partnerships</NuxtLink>
-        </li>
-      </ul>
-      <ul class="footer__list">
-        <h3 class="footer__title">General</h3>
-        <li class="footer__item">
-          <NuxtLink class="footer__link" to="/privacy">Privacy Policy</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink class="footer__link" to="">Contact us</NuxtLink>
-        </li>
-      </ul>
-      <a href="/sitemap.xml">sad</a>
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <h3 class="footer__title">Passengers</h3>
+          <li class="footer__item">
+            <NuxtLink class="footer__link" to="">Airlines</NuxtLink>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <h3 class="footer__title">Business and Community</h3>
+          <li class="footer__item">
+            <NuxtLink class="footer__link" to="/about">About us</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink class="footer__link" to="">Partnerships</NuxtLink>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <h3 class="footer__title">General</h3>
+          <li class="footer__item">
+            <NuxtLink class="footer__link" to="/privacy"
+              >Privacy Policy</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink class="footer__link" to="">Contact us</NuxtLink>
+          </li>
+        </ul>
+      </nav>
     </UContainer>
   </footer>
 </template>
@@ -40,15 +43,15 @@ import UContainer from "./Container/UContainer.vue";
   background-color: #c2cff0;
   &__container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 
     padding: 36px 0;
-
-    @media (max-width: 760px) {
-      flex-direction: column;
-      text-align: center;
-    }
+  }
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
   &__title {
     font-size: 16px;
