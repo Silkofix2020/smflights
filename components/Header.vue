@@ -7,11 +7,7 @@
           <span class="header__logo header__logo--bold">F</span>lights
         </div>
         <div class="header-img__wrapper">
-          <img
-            class="header-img__item"
-            src="/public/img/header-logo.png"
-            alt=""
-          />
+          <img class="header-img__item" src="/img/header-logo.png" alt="" />
         </div>
       </NuxtLink>
       <nav class="header__nav">
