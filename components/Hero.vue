@@ -15,7 +15,7 @@ const props = defineProps({
   position: relative;
   padding: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-    url(/_nuxt/public/img/header-bg.webp);
+    url(/img/header-bg.webp);
   height: 400px;
   background-size: cover;
   background-position: center;
