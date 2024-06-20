@@ -25,6 +25,7 @@
           <NuxtLink class="footer__link" to="">Contact us</NuxtLink>
         </li>
       </ul>
+      <a href="/sitemap.xml">sad</a>
     </UContainer>
   </footer>
 </template>

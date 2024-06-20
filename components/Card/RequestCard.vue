@@ -13,7 +13,7 @@
       <div class="request-card__delimiter-item"></div>
     </div>
     <p class="request-card__cta">submit a request</p>
-    <form class="request-card__form" @submit.prevent="sendToGoogleSheets">
+    <form class="request-card__form" @submit.prevent="handleSubmit">
       <div class="request-card__grid-container">
         <UInput :class="'form-group grid-group'" v-model="formStore.from"
           >From</UInput
@@ -31,8 +31,9 @@
           >Your Name (Optional)</UInput
         >
         <UButton class="submit-button full-width" type="submit"
-          >get a free quote</UButton
-        >
+          >get a free quote
+          <LoadCycle v-if="isLoading" />
+        </UButton>
       </div>
     </form>
     <p class="request-card__privacy">
@@ -48,14 +49,18 @@
 
 <script setup>
 import { ref, watch } from "vue";
+import { useRouter } from "#app";
 import { useFormStore } from "../store/formStore";
 import UInput from "../Input/UInput.vue";
 import UButton from "../Button/UButton.vue";
+import LoadCycle from "../animation/LoadCycle.vue";
 
 const formStore = useFormStore();
 const clientEmail = ref("");
 const clientPhone = ref("");
 const clientName = ref("");
+const router = useRouter();
+const isLoading = ref(false);
 
 watch(
   [clientEmail, clientPhone, clientName],
@@ -88,7 +93,19 @@ const sendToGoogleSheets = async () => {
     console.log("Data sent successfully:", response);
   } catch (error) {
     console.error("Error sending data:", error);
+    console.error("Error details:", error.response); // Additional error details
   }
+};
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  isLoading.value = true;
+
+  await sendToGoogleSheets();
+
+  setTimeout(() => {
+    router.push("/success");
+  }, 2000);
 };
 </script>
 
@@ -157,22 +174,5 @@ const sendToGoogleSheets = async () => {
   & input {
     width: 100%;
   }
-}
-.submit-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #cc1f16;
-  color: white;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.submit-button:hover {
-  background-color: darkred;
 }
 </style>

@@ -30,8 +30,6 @@ const toggleMenu = () => {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/variables.scss";
-
 .burger-menu-container {
   position: relative;
 }
@@ -40,34 +38,34 @@ const toggleMenu = () => {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 10; /* Убедитесь, что z-index установлен */
 
   span {
     width: 24px;
     height: 2px;
-    background: #fff;
+    background: #000000;
     transition: all 0.3s linear;
 
     &:nth-child(2) {
       margin: 4px 0;
     }
-  }
 
-  &.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
+    &.open:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
 
-  &.open span:nth-child(2) {
-    opacity: 0;
-  }
+    &.open:nth-child(2) {
+      opacity: 0;
+    }
 
-  &.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    &.open:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
   }
 
   @media (max-width: 760px) {
@@ -82,20 +80,25 @@ const toggleMenu = () => {
 
   @media (max-width: 760px) {
     position: absolute;
-    top: 30px; /* Adjust the value to position the menu below the button */
-    right: 0;
-    flex-direction: column;
+    top: 20px;
+    right: -18px;
+    justify-content: space-around;
     align-items: flex-end;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    transition: max-height, padding 0.3s ease-in-out;
+    background-color: #f5f8ff;
+    border-radius: 5px 0 0 5px;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out,
+      max-height 0.3s ease-in-out;
     overflow: hidden;
+    width: 0;
+    padding: 0;
     max-height: 0;
     gap: 0;
+    z-index: 1;
 
     &.open {
+      width: 200px;
       padding: 10px;
-      max-height: 200px; /* Adjust this value according to the number of items */
+      max-height: 200px;
     }
   }
 }

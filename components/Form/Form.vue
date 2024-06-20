@@ -23,8 +23,40 @@
       </div>
     </div>
     <div class="form-wrapper">
-      <UInput :class="'form-group'" v-model="from">Depart from</UInput>
-      <UInput :class="'form-group'" v-model="to">Arrive at</UInput>
+      <div>
+        <UInput
+          :class="'form-group'"
+          @input="() => searchCities('from')"
+          v-model="from"
+          >Depart from</UInput
+        >
+        <ul v-if="showFromSuggestions" class="dropdown">
+          <li
+            v-for="suggestion in fromSuggestions"
+            :key="suggestion"
+            @click="selectCity('from', suggestion)"
+          >
+            {{ suggestion }}
+          </li>
+        </ul>
+      </div>
+      <div>
+        <UInput
+          :class="'form-group'"
+          @input="() => searchCities('to')"
+          v-model="to"
+          >Arrive at</UInput
+        >
+        <ul v-if="showToSuggestions" class="dropdown">
+          <li
+            v-for="suggestion in toSuggestions"
+            :key="suggestion"
+            @click="selectCity('to', suggestion)"
+          >
+            {{ suggestion }}
+          </li>
+        </ul>
+      </div>
       <UInput :class="'form-group'" type="date" v-model="departureDate"
         >Departure Date</UInput
       >
@@ -36,10 +68,10 @@
         >Return Date</UInput
       >
       <USelect v-model="passengerInfo" />
-      <button :disabled="isLoading" class="form-button" @click="handleSubmit">
+      <UButton :disabled="isLoading" class="form-button" @click="handleSubmit">
         Search Flights
-        <div v-if="isLoading" class="loader"></div>
-      </button>
+        <LoadCycle v-if="isLoading"></LoadCycle>
+      </UButton>
     </div>
     <p class="form__footnote">
       Dates are for informational purpose only. Fares about to be displayed may
@@ -54,12 +86,16 @@ import { useRouter } from "#app";
 import { useFormStore } from "../store/formStore";
 import UInput from "../Input/UInput.vue";
 import USelect from "../Input/USelect.vue";
+import UButton from "../Button/UButton.vue";
+import LoadCycle from "../animation/LoadCycle.vue";
 
 const formStore = useFormStore();
 const router = useRouter();
 
 const from = ref("");
 const to = ref("");
+const fromCode = ref("");
+const toCode = ref("");
 const departureDate = ref("");
 const returnDate = ref("");
 const flightType = ref("Round-trip");
@@ -69,6 +105,100 @@ const passengerInfo = ref({
   infants: 0,
 });
 const isLoading = ref(false);
+
+const cities = [
+  "New York",
+  "Los Angeles",
+  "Chicago",
+  "Chiccago",
+  "Houston",
+  "Phoenix",
+  "Moscow",
+  "Sochi",
+  "Pekin",
+  "Tula",
+]; // Пример массива городов
+const fromSuggestions = ref([]);
+const toSuggestions = ref([]);
+const showFromSuggestions = ref(false);
+const showToSuggestions = ref(false);
+let searchTimeout = null;
+
+const airportsData = ref([]);
+
+onMounted(() => {
+  fetch("static/airports.json")
+    .then((response) => response.json())
+    .then((data) => {
+      airportsData.value = data;
+    })
+    .catch((error) => {
+      console.error("Error fetching airports data:", error);
+    });
+});
+
+const searchCities = (field) => {
+  if (searchTimeout) {
+    clearTimeout(searchTimeout);
+  }
+
+  searchTimeout = setTimeout(() => {
+    const value = field === "from" ? from.value : to.value;
+
+    if (value.length < 2) {
+      if (field === "from") {
+        fromSuggestions.value = [];
+        showFromSuggestions.value = false;
+      } else if (field === "to") {
+        toSuggestions.value = [];
+        showToSuggestions.value = false;
+      }
+      return;
+    }
+
+    const suggestions = Object.values(airportsData.value)
+      .filter(
+        (airport) =>
+          airport.city.toLowerCase().startsWith(value.toLowerCase()) &&
+          airport.iata
+      )
+      .map((airport) => `${airport.city} (${airport.iata})`);
+
+    if (field === "from") {
+      fromSuggestions.value = suggestions;
+      showFromSuggestions.value = fromSuggestions.value.length > 0;
+    } else if (field === "to") {
+      toSuggestions.value = suggestions;
+      showToSuggestions.value = toSuggestions.value.length > 0;
+    }
+  }, 300); // Задержка в 300 миллисекунд для лучшего UX
+};
+
+const selectCity = (field, cityWithCode) => {
+  if (
+    !cityWithCode ||
+    typeof cityWithCode !== "string" ||
+    !cityWithCode.includes(" (")
+  ) {
+    console.error("Invalid cityWithCode format:", cityWithCode);
+    return;
+  }
+
+  const city = cityWithCode.split(" (")[0];
+  const code = cityWithCode.match(/\(([^)]+)\)/)[1];
+
+  const combinedValue = `${city} (${code})`;
+
+  if (field === "from") {
+    from.value = combinedValue;
+    fromSuggestions.value = [];
+    showFromSuggestions.value = false;
+  } else if (field === "to") {
+    to.value = combinedValue;
+    toSuggestions.value = [];
+    showToSuggestions.value = false;
+  }
+};
 
 watch(
   [flightType, from, to, departureDate, returnDate, passengerInfo],
@@ -104,6 +234,7 @@ const handleSubmit = (event) => {
 @import "../assets/scss/variables.scss";
 
 .form {
+  margin: 0 auto;
   width: 99%;
   max-width: 1108px;
   display: flex;
@@ -150,52 +281,27 @@ const handleSubmit = (event) => {
   &-wrapper {
     padding-top: 10px;
   }
-  &-button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 39px;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 50px;
-    background-color: #feb47b;
-    color: #fff;
-    cursor: pointer;
-    &:hover {
-      @media (hover: hover) {
-        background-color: #ff6f00;
-      }
-    }
-
-    @media (hover: none) {
-      &:active {
-        background-color: #ff6f00;
-      }
-    }
-  }
   &__footnote {
     font-size: 12px;
     color: rgba($color: #616161, $alpha: 0.7);
   }
 }
-.loader {
-  position: absolute;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ccc;
-  border-top: 2px solid #ff6f00;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  z-index: 1000;
+}
+.dropdown li {
+  padding: 10px;
+  cursor: pointer;
+}
+.dropdown li:hover {
+  background-color: #f0f0f0;
 }
 </style>

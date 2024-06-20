@@ -11,8 +11,25 @@ import Footer from "../components/Footer.vue";
 const formStore = useFormStore();
 
 useHead({
-  title: "About",
-  meta: [{ name: "description", content: "My amazing site." }],
+  title: "About Us - SM Flights",
+  meta: [
+    {
+      name: "description",
+      content: "Learn more about SM Flights and what we offer.",
+    },
+    { name: "keywords", content: "about, SM Flights, company information" },
+    { property: "og:title", content: "About Us - SM Flights" },
+    {
+      property: "og:description",
+      content: "Learn more about SM Flights and what we offer.",
+    },
+    {
+      property: "og:image",
+      content: "https://smflights.vercel.app/og-image.jpg",
+    },
+    { property: "og:url", content: "https://smflights.vercel.app/about" },
+    { property: "og:type", content: "article" },
+  ],
 });
 </script>
 <style>

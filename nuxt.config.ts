@@ -33,8 +33,16 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "@nuxtjs/sitemap"],
+  modules: ["@pinia/nuxt", "@nuxtjs/sitemap", "nuxt-gtag"],
+  gtag: {
+    id: "G-453R0PVPBW",
+    config: {
+      anonymize_ip: true, // опционально, анонимизация IP
+      send_page_view: false, // опционально, отправка просмотра страниц
+    },
+  },
   sitemap: {
+    xsl: false,
     hostname: "https://yourwebsite.com",
     gzip: true,
     routes: [

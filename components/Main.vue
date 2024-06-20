@@ -26,6 +26,7 @@
         </div>
       </section>
     </Hero>
+
     <div class="some">
       <div class="some__header">
         <div class="some__title-group">
@@ -48,41 +49,45 @@
         />
       </div>
     </div>
-    <div class="discover">
-      <div class="some__header">
-        <h3 class="some__title">Discover</h3>
-      </div>
-      <div class="discover__cards">
-        <DiscoverCard
-          v-for="discoverCard in discoverCards"
-          :key="discoverCard.index"
-          :index="discoverCard.index"
-          :title="discoverCard.title"
-          :text="discoverCard.text"
-          :bgImg="discoverCard.bgImg"
-        />
-      </div>
-    </div>
-    <div class="some">
-      <div class="some__header">
-        <div class="some__title-group">
-          <h3 class="some__title">Cheap flights selected for you</h3>
+
+    <UContainer>
+      <div class="discover">
+        <div class="some__header">
+          <h3 class="some__title">Discover</h3>
+        </div>
+        <div class="discover__cards">
+          <DiscoverCard
+            v-for="discoverCard in discoverCards"
+            :key="discoverCard.index"
+            :index="discoverCard.index"
+            :title="discoverCard.title"
+            :text="discoverCard.text"
+            :bgImg="discoverCard.bgImg"
+          />
+        </div></div
+    ></UContainer>
+    <UContainer>
+      <div class="some">
+        <div class="some__header">
+          <div class="some__title-group">
+            <h3 class="some__title">Cheap flights selected for you</h3>
+          </div>
+        </div>
+        <div class="some__cards">
+          <OfferCard
+            v-for="cheap in cheap"
+            :key="cheap.title"
+            :title="cheap.title"
+            :discript="cheap.discript"
+            :img="cheap.img"
+            :logo="cheap.logo"
+            :price="cheap.price"
+            :cardClass="cheap.cardClass"
+            :priceClass="cheap.priceClass"
+          />
         </div>
       </div>
-      <div class="some__cards">
-        <OfferCard
-          v-for="cheap in cheap"
-          :key="cheap.title"
-          :title="cheap.title"
-          :discript="cheap.discript"
-          :img="cheap.img"
-          :logo="cheap.logo"
-          :price="cheap.price"
-          :cardClass="cheap.cardClass"
-          :priceClass="cheap.priceClass"
-        />
-      </div>
-    </div>
+    </UContainer>
   </main>
 </template>
 
@@ -201,6 +206,10 @@ const discoverCards = [
     gap: 20px;
     color: #ffffff;
     padding: 20px 0;
+    @media (max-width: 450px) {
+      text-align: center;
+    }
+
     &__advantages {
       width: 100%;
       display: flex;
@@ -212,6 +221,7 @@ const discoverCards = [
       text-align: center;
       border-right: 1px solid #ffffff;
       padding: 0 20px;
+
       &:nth-child(3) {
         border: none;
       }
@@ -220,9 +230,6 @@ const discoverCards = [
         font-weight: 700;
       }
     }
-  }
-  @media (max-width: 760px) {
-    padding: 300px 0 0 0;
   }
 }
 .some,
