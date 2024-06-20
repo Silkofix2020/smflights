@@ -35,7 +35,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@pinia/nuxt", "@nuxtjs/sitemap", "nuxt-gtag", "@nuxtjs/robots"],
   gtag: {
-    id: "G-453R0PVPBW",
+    id: "G-QS7MP05MRG",
     config: {
       anonymize_ip: true, // опционально, анонимизация IP
       send_page_view: false, // опционально, отправка просмотра страниц
