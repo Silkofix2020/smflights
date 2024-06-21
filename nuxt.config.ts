@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "@nuxtjs/robots",
     "@nuxt/content",
-    "@nuxt/image"
+    "@nuxt/image",
   ],
   gtag: {
     id: "G-QS7MP05MRG",
@@ -56,6 +56,9 @@ export default defineNuxtConfig({
       "/about",
       "/result",
       "/privacy",
+      "/success",
+      "/airlines",
+      "/contacts",
       // дополнительные маршруты
     ],
   },
