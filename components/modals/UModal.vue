@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import UButton from "../button/UButton.vue";
+import UButton from "../Button/UButton.vue";
 
 const props = defineProps({
   isOpen: {

@@ -58,7 +58,7 @@ import { ref, watch } from "vue";
 import { useRouter } from "#app";
 import { useFormStore } from "../store/formStore";
 import UInput from "../Input/UInput.vue";
-import UButton from "../button/UButton.vue";
+import UButton from "../Button/UButton.vue";
 import LoadCycle from "../animation/LoadCycle.vue";
 
 const formStore = useFormStore();
