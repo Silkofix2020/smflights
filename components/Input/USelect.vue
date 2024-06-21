@@ -39,7 +39,7 @@
 
 <script setup>
 import { ref, computed, watch } from "vue";
-import UButton from "../button/UButton.vue";
+import UButton from "../Button/UButton.vue";
 
 const props = defineProps({
   modelValue: {
