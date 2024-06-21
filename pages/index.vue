@@ -6,7 +6,12 @@
 <script setup>
 useHead({
   title: "SM Flights",
-  meta: [{ name: "description", content: "My amazing site." }],
+  meta: [
+    {
+      name: "description",
+      content: "SM Flights - Your Reliable Flight Booking Service",
+    },
+  ],
 });
 </script>
 <style></style>

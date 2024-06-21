@@ -8,9 +8,9 @@
         Text us and save $30 EXTRA: code SMFL30
       </div>
       <div class="flare-card__price">
-        <span class="flare-card__price--old">$1155</span>
+        <span class="flare-card__price--old">$815</span>
         <div class="flare-card__price--actual">
-          <span class="flare-card__price--currancy">$</span>855<span
+          <span class="flare-card__price--currancy">$</span>467<span
             class="flare-card__price--article"
             >*</span
           >
@@ -110,10 +110,21 @@ const formStore = useFormStore();
   &__link {
     margin: 5px 0;
     padding: 4px 60px;
-    background-color: #cc1f16;
+    background-color: $primary-color;
     text-decoration: none;
     color: #ffffff;
     border-radius: 5px;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+
+    @media (hover: none) {
+      &:active {
+        background-color: $secondary-color;
+      }
+    }
   }
 }
 </style>

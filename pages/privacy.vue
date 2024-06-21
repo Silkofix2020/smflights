@@ -42,7 +42,7 @@ onMounted(async () => {
   width: 100%;
   max-width: 1108px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   color: #7e7e7e;
   &__table {
     width: 100%;

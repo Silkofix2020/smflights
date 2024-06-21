@@ -66,8 +66,55 @@ We use different methods to collect PI from and about you including through:
 
 When we chat with you (e.g. WhatsApp, Facebook, regular sms etc.) the chat might be accidentally closed/ removed, there might be interruptions, slow internet connection etc. We may contact you later via automated phone and text messages or email (if available) in order to restore our communication started within the chat. No purchase necessary. You can opt out from further communication by replying to sms/ email or notifying us during the phone call.
 One of the main collection methods are VOICE CALLS We have vested interest to ensure you have chosen the best possible option. Voice calls are an exclusive opportunity to provide you with an immediate customer support and disclose additional product features, you might not notice on website. Usually, we call back on your request. Sometimes there might be unfinished conversations regarding current flights (misunderstanding in live chat, email system error, poor internet connection etc.), which require immediate response. We don’t make unwanted telemarketing robocalls or any annoying advertising campaigns. You can opt-out this communication any time by contacting us via phone or email.  
-**PI we collect passively** We also collect your PI passively. For example, we collect information about you over time and across different Websites when you visit the Platform. We also use tracking tools like cookies and beacons. As you interact with our Platforms, we will automatically collect Network Activity Information about your equipment, browsing actions and patterns. We collect this PI by using cookies and other similar technologies. For additional information, please, refer to our [Cookie policy](https://www.asaptickets.com/privacy#cookiePolicy). Platform features may make use of your device attributes and settings that will allow us to determine your physical location (country, state). Such technologies may include IP address mapping or other technologies. We use this information to enhance and personalize your experience and provide you with offers and services that may be of interest to you. ITN does not have control over your device settings, but we do recommend enabling location services on your device so you can take advantage of the location based features and functionality offered.  
-**PI we receive from service providers:** We collect your PI using service providers. This can include when you log in using a service provider platform, such as Facebook. In addition, we also integrate service providers' software that collects information about users for security reasons. The categories of PI ITN has collected/disclosed/sold for a business purpose in the preceding 12 months you can find [HERE](https://www.asaptickets.com/privacy#piModal)
+**PI we collect passively** We also collect your PI passively. For example, we collect information about you over time and across different Websites when you visit the Platform. We also use tracking tools like cookies and beacons. As you interact with our Platforms, we will automatically collect Network Activity Information about your equipment, browsing actions and patterns. We collect this PI by using cookies and other similar technologies. For additional information, please, refer to our [Cookie policy](#cookies). Platform features may make use of your device attributes and settings that will allow us to determine your physical location (country, state). Such technologies may include IP address mapping or other technologies. We use this information to enhance and personalize your experience and provide you with offers and services that may be of interest to you. ITN does not have control over your device settings, but we do recommend enabling location services on your device so you can take advantage of the location based features and functionality offered.  
+**PI we receive from service providers:** We collect your PI using service providers. This can include when you log in using a service provider platform, such as Facebook. In addition, we also integrate service providers' software that collects information about users for security reasons. The categories of PI ITN has collected/disclosed/sold for a business purpose in the preceding 12 months you can find here:
+
+### CATEGORIES OF PI COLLECTED/ DISCLOSED/SOLD
+
+ITN might disclose PI to service providers and third parties for a business purpose or when we receive valuable services from third parties.
+
+<table border="1">
+  <tr>
+    <th><strong>Collected</strong></th>
+    <th><strong>Disclosed for a business purpose</strong></th>
+    <th><strong>Available to certain 3rd parties in order to receive valuable services (Sold)</strong></th>
+  </tr>
+  <tr>
+    <td>a. Identifiers</td>
+    <td>a. Identifiers</td>
+    <td>a. Identifiers</td>
+  </tr>
+  <tr>
+    <td>b. Contact Data</td>
+    <td>b. Contact Data</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>c. Commercial Information</td>
+    <td>c. Commercial Information</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>d. Network Activity Information</td>
+    <td>d. Network Activity Information</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>e. Inferences</td>
+    <td>e. Inferences</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>f. Audio and electronic information</td>
+    <td>f. Audio and electronic information</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>g. Geolocation data</td>
+    <td>g. Geolocation data</td>
+    <td></td>
+  </tr>
+</table>
 
 ## FOR WHAT PURPOSE WE USE YOUR PERSONAL INFORMATION
 
@@ -167,6 +214,8 @@ Due to the remote nature of our services, it is important for us to keep communi
 ## HOW ITN RESPONDS TO “DO NOT TRACK” SIGNALS
 
 Some browsers have a “Do Not Track” feature that lets you tell websites that you do not want to have your online activities tracked. These features are not yet uniform, so we are not currently set up to respond to those signals.
+
+<a name="cookies"></a>
 
 ## ITN COOKIE POLICY
 

@@ -33,7 +33,14 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "@nuxtjs/sitemap", "nuxt-gtag", "@nuxtjs/robots"],
+  modules: [
+    "@pinia/nuxt",
+    "@nuxtjs/sitemap",
+    "nuxt-gtag",
+    "@nuxtjs/robots",
+    "@nuxt/content",
+    "@nuxt/image"
+  ],
   gtag: {
     id: "G-QS7MP05MRG",
     config: {
@@ -64,5 +71,14 @@ export default defineNuxtConfig({
       routes: ["/"],
     },
   },
-  css: ["~/assets/scss/main.scss"],
+  css: ["~/assets/styles/main.scss"],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "@/assets/styles/variables.scss";`,
+        },
+      },
+    },
+  },
 });

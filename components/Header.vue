@@ -22,8 +22,6 @@ import BurgerMenu from "./BurgerMenu.vue";
 </script>
 
 <style lang="scss">
-@import "../assets/scss/variables.scss";
-
 .wrap {
   margin: 0 auto;
   width: 100%;
@@ -34,7 +32,7 @@ import BurgerMenu from "./BurgerMenu.vue";
   padding: 4px 30px;
 
   @media (max-width: 760px) {
-    padding: 10px 18px 0;
+    padding: 4px 18px;
     justify-content: space-between;
   }
 }

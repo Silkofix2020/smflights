@@ -42,7 +42,7 @@ const props = defineProps({
   justify-content: center;
   width: 100%;
   padding: 12px;
-  background-color: #cc1f16;
+  background-color: $primary-color;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -53,13 +53,13 @@ const props = defineProps({
   font-size: 14px;
   &:hover {
     @media (hover: hover) {
-      background-color: #cc1f16;
+      background-color: $secondary-color;
     }
   }
 
   @media (hover: none) {
     &:active {
-      background-color: darkred;
+      background-color: $secondary-color;
     }
   }
 }

@@ -26,30 +26,30 @@
         </div>
       </section>
     </Hero>
-
-    <div class="some">
-      <div class="some__header">
-        <div class="some__title-group">
-          <h3 class="some__title">Traveling from your location</h3>
-          <h4 class="some__subtitle">round trip - one passenger</h4>
+    <UContainer>
+      <div class="some">
+        <div class="some__header">
+          <div class="some__title-group">
+            <h3 class="some__title">Traveling from your location</h3>
+            <h4 class="some__subtitle">round trip - one passenger</h4>
+          </div>
+          <a href="#" class="some__link">Explore more destinations</a>
         </div>
-        <a href="#" class="some__link">Explore more destinations</a>
-      </div>
 
-      <div class="some__cards">
-        <OfferCard
-          v-for="card in cards"
-          :key="card.title"
-          :title="card.title"
-          :discript="card.discript"
-          :img="card.img"
-          :logo="card.logo"
-          :price="card.price"
-          :button="card.button"
-        />
+        <div class="some__cards">
+          <OfferCard
+            v-for="card in cards"
+            :key="card.title"
+            :title="card.title"
+            :discript="card.discript"
+            :img="card.img"
+            :logo="card.logo"
+            :price="card.price"
+            :button="card.button"
+          />
+        </div>
       </div>
-    </div>
-
+    </UContainer>
     <UContainer>
       <div class="discover">
         <div class="some__header">

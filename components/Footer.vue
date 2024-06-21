@@ -52,6 +52,7 @@ import UContainer from "./Container/UContainer.vue";
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
   &__title {
     font-size: 16px;

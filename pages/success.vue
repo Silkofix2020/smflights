@@ -21,7 +21,7 @@ const router = useRouter();
 onMounted(() => {
   setTimeout(() => {
     router.push("/");
-  }, 2000);
+  }, 4000);
 });
 </script>
 

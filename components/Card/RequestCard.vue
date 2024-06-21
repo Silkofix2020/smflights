@@ -15,10 +15,16 @@
     <p class="request-card__cta">submit a request</p>
     <form class="request-card__form" @submit.prevent="handleSubmit">
       <div class="request-card__grid-container">
-        <UInput :class="'form-group grid-group'" v-model="formStore.from"
+        <UInput
+          :class="'form-group grid-group'"
+          :disabled="true"
+          v-model="formStore.from"
           >From</UInput
         >
-        <UInput :class="'form-group grid-group'" v-model="formStore.to"
+        <UInput
+          :class="'form-group grid-group'"
+          :disabled="true"
+          v-model="formStore.to"
           >To</UInput
         >
         <UInput :class="'form-group full-width'" v-model="clientEmail"
@@ -28,7 +34,7 @@
           >Phone</UInput
         >
         <UInput :class="'form-group grid-group'" v-model="clientName"
-          >Your Name (Optional)</UInput
+          >Your Name</UInput
         >
         <UButton class="submit-button full-width" type="submit"
           >get a free quote
@@ -52,7 +58,7 @@ import { ref, watch } from "vue";
 import { useRouter } from "#app";
 import { useFormStore } from "../store/formStore";
 import UInput from "../Input/UInput.vue";
-import UButton from "../Button/UButton.vue";
+import UButton from "../button/UButton.vue";
 import LoadCycle from "../animation/LoadCycle.vue";
 
 const formStore = useFormStore();
@@ -124,6 +130,7 @@ const handleSubmit = async (event) => {
   &__title {
     font-size: 20px;
     font-weight: 800;
+    text-align: center;
     &--red {
       color: #cc1f16;
     }

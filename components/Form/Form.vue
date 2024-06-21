@@ -86,7 +86,7 @@ import { useRouter } from "#app";
 import { useFormStore } from "../store/formStore";
 import UInput from "../Input/UInput.vue";
 import USelect from "../Input/USelect.vue";
-import UButton from "../Button/UButton.vue";
+import UButton from "../button/UButton.vue";
 import LoadCycle from "../animation/LoadCycle.vue";
 
 const formStore = useFormStore();
@@ -231,8 +231,6 @@ const handleSubmit = (event) => {
 </script>
 
 <style lang="scss">
-@import "../assets/scss/variables.scss";
-
 .form {
   margin: 0 auto;
   width: 99%;
