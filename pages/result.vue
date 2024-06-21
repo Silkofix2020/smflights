@@ -27,9 +27,9 @@ useHead({
   meta: [{ name: "description", content: "My amazing site." }],
 });
 import { useFormStore } from "../store/formStore";
-import FareCard from "/components/Card/FareCard.vue";
-import RequestCard from "/components/Card/RequestCard.vue";
-import UContainer from "/components/Container/UContainer.vue";
+import FareCard from "../components/Card/FareCard.vue";
+import RequestCard from "../components/Card/RequestCard.vue";
+import UContainer from "../components/Container/UContainer.vue";
 import { useFetch } from "nuxt/app";
 
 const formStore = useFormStore();
