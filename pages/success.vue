@@ -16,6 +16,11 @@
 import { onMounted } from "vue";
 import { useRouter } from "#app";
 
+useHead({
+  title: "Success",
+  meta: [{ name: "description", content: "Thank you! We will call you soon!" }],
+});
+
 const router = useRouter();
 
 onMounted(() => {
