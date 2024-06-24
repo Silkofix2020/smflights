@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         {
           hid: "description",
           name: "description",
-          content: "Описание вашего сайта",
+          content: "Book your flights easily and quickly with SM Flights.",
         },
         { name: "keywords", content: "aviation, flights, booking" },
         // Open Graph meta tags
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
   ],
   gtag: {
-    id: "G-QS7MP05MRG",
+    id: "G-453R0PVPBW",
     config: {
       anonymize_ip: true, // опционально, анонимизация IP
       send_page_view: false, // опционально, отправка просмотра страниц
