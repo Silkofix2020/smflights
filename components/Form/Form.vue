@@ -106,18 +106,6 @@ const passengerInfo = ref({
 });
 const isLoading = ref(false);
 
-const cities = [
-  "New York",
-  "Los Angeles",
-  "Chicago",
-  "Chiccago",
-  "Houston",
-  "Phoenix",
-  "Moscow",
-  "Sochi",
-  "Pekin",
-  "Tula",
-]; // Пример массива городов
 const fromSuggestions = ref([]);
 const toSuggestions = ref([]);
 const showFromSuggestions = ref(false);

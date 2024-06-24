@@ -15,5 +15,11 @@ declare module "nuxt/schema" {
       Allow?: string | string[];
       Sitemap?: string;
     };
+    sitemap?: {
+      xsl?: boolean;
+      hostname?: string;
+      gzip?: boolean;
+      routes?: string[];
+    };
   }
 }

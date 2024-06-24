@@ -24,9 +24,9 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image",
-          content: "https://smflights.vercel.app/og-image.png",
+          content: "https://www.smflights.com/og-image.png",
         },
-        { property: "og:url", content: "https://smflights.vercel.app" },
+        { property: "og:url", content: "https://www.smflights.com" },
         { property: "og:type", content: "website" },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
   },
   sitemap: {
     xsl: false,
-    hostname: "https://smflights.vercel.app",
+    hostname: "https://www.smflights.com",
     gzip: true,
     routes: [
       "/about",

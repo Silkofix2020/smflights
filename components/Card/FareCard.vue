@@ -99,7 +99,7 @@ const formStore = useFormStore();
       position: absolute;
       font-size: 15px;
       top: 14px;
-      left: 160px;
+      left: 150px;
     }
     &--prefix {
       width: 44px;
