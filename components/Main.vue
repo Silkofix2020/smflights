@@ -46,6 +46,7 @@
             :logo="card.logo"
             :price="card.price"
             :button="card.button"
+            :backgroundImageClass="card.backgroundImageClass"
           />
         </div>
       </div>
@@ -99,38 +100,42 @@ import UContainer from "./Container/UContainer.vue";
 
 const cards = [
   {
-    title: "London",
-    discript: "Apr 5-8 <br/> Direct flight 5h 15 min",
+    title: "New York",
+    discript: "Direct flight 5h 15 min",
     img: "/img/Rectangle52.png",
-    logo: "/img/KLM.png",
+    logo: "/airlines/DAL.png",
     price: 35,
     cardClass: "yellow50",
     priceClass: "red",
     button: true,
+    backgroundImageClass: "bg-new-york",
   },
   {
-    title: "Rome",
-    discript: "Oct 5-8 <br /> Direct flight 3h 15 min",
-    img: "/img/Rectangle 53.png",
-    logo: "/img/JBU.png",
+    title: "Miami",
+    discript: "Direct flight 2h 15 min",
+    img: "/img/Rectangle53.png",
+    logo: "/airlines/FFT.png",
     price: 45,
     button: false,
+    backgroundImageClass: "bg-miami",
   },
   {
-    title: "Madrid",
-    discript: "Oct 5-8 <br /> Direct flight 3h 15 min",
-    img: "/img/Rectangle 54.png",
-    logo: "/img/DLH.png",
+    title: "Las Vegas",
+    discript: "Direct flight 4h 15 min",
+    img: "/img/Rectangle54.png",
+    logo: "/airlines/UAL.png",
     price: 25,
     button: false,
+    backgroundImageClass: "bg-las-vegas",
   },
   {
-    title: "Paris",
-    discript: "Oct 5-8 <br /> Direct flight 3h 15 min",
-    img: "/img/Rectangle 55.png",
-    logo: "/img/AFR.png",
+    title: "Los Angeles",
+    discript: "Direct flight 3h 15 min",
+    img: "/img/Rectangle55.png",
+    logo: "/airlines/AAL.png",
     price: 55,
     button: true,
+    backgroundImageClass: "bg-los-angeles",
   },
 ];
 

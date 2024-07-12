@@ -66,7 +66,7 @@ export default defineNuxtConfig({
     UserAgent: "*",
     Disallow: "/admin",
     Allow: "/",
-    Sitemap: "https://smflights.vercel.app/sitemap.xml",
+    Sitemap: "https://www.smflights.com/sitemap.xml",
   },
   plugins: ["~/plugins/v-click-outside.js", "~/plugins/loading.js"],
   nitro: {

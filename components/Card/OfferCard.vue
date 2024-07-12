@@ -4,7 +4,13 @@
     <div class="card__discription">
       <div class="card__text">
         <h3 class="card__title">{{ title }}</h3>
-        <p v-html="discript" class="card__discript"></p>
+        <div class="card__date">
+          <p class="card__date-item">
+            {{ formattedDate }}
+          </p>
+          <p class="card__discript">{{ discript }}</p>
+        </div>
+
         <div>
           <img class="card__logo" :src="logo" alt="image" />
         </div>
@@ -20,6 +26,7 @@
 
 <script setup>
 import { computed } from "vue";
+
 const props = defineProps({
   title: String,
   discript: String,
@@ -29,13 +36,27 @@ const props = defineProps({
   cardClass: String,
   priceClass: String,
   button: Boolean,
+  backgroundImageClass: String,
 });
 
-const backgroundImageClass = computed(() => {
-  return {
-    card__img: true,
-    [`bg-${props.title.toLowerCase().replace(/ /g, "-")}`]: true,
-  };
+// Функция для форматирования даты в нужный формат
+const formatDate = (date) => {
+  const options = { month: "short", day: "numeric" };
+  return new Intl.DateTimeFormat("en-US", options).format(date);
+};
+
+// Объявляем реактивную переменную startDay
+const startDay = ref(new Date());
+
+// Вычисляемое свойство для форматированной даты с диапазоном
+const formattedDate = computed(() => {
+  const startDate = new Date(startDay.value);
+  startDate.setDate(startDate.getDate() + 6);
+  const endDate = new Date(startDate);
+  endDate.setDate(endDate.getDate() + 6);
+  const formattedStartDate = formatDate(startDate);
+  const formattedEndDate = formatDate(endDate);
+  return `${formattedStartDate} - ${formattedEndDate}`;
 });
 </script>
 
@@ -82,7 +103,8 @@ const backgroundImageClass = computed(() => {
   &__title {
     font-size: 18px;
   }
-  &__discript {
+  &__discript,
+  &__date-item {
     font-size: 14px;
   }
   &__logo {
@@ -101,23 +123,27 @@ const backgroundImageClass = computed(() => {
     text-decoration: none;
   }
 }
-.bg-london {
-  background-image: url("/public/img/Rectangle52.png");
+.bg-new-york {
+  background-image: url("/public/img/aurora-kreativ-UN4cs4zNCYo-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.bg-miami {
+  background-image: url("/public/img/aurora-kreativ-UN4cs4zNCYo-unsplash.png");
   background-size: cover;
   background-position: center;
 }
-.bg-rome {
-  background-image: url("/public/img/Rectangle 53.png");
+.bg-las-vegas {
+  background-image: url("/public/img/Rectangle54.webp");
   background-size: cover;
   background-position: center;
 }
-.bg-madrid {
-  background-image: url("/public/img/Rectangle 54.png");
-  background-size: cover;
-  background-position: center;
-}
-.bg-paris {
-  background-image: url("/public/img/Rectangle 55.png");
+.bg-los-angeles {
+  background-image: url("/public/img/Rectangle55.webp");
   background-size: cover;
   background-position: center;
 }
