@@ -85,6 +85,7 @@
             :price="cheap.price"
             :cardClass="cheap.cardClass"
             :priceClass="cheap.priceClass"
+            :backgroundImageClass="cheap.backgroundImageClass"
           />
         </div>
       </div>
@@ -142,39 +143,43 @@ const cards = [
 const cheap = [
   {
     title: "London",
-    discript: "Apr 5-8 <br/> Direct flight 5h 15 min",
-    img: "/img/Rectangle52.png",
+    discript: "Direct flight 5h 15 min",
+    img: "/img/Rectangle_52.png",
     logo: "/img/KLM.png",
     price: 35,
     cardClass: "yellow50",
     priceClass: "red",
+    backgroundImageClass: "bg-london",
   },
   {
     title: "Rome",
-    discript: "Oct 5-8 <br /> Direct flight 3h 15 min",
-    img: "/img/Rectangle 53.png",
+    discript: "Direct flight 3h 15 min",
+    img: "/img/Rectangle_53.png",
     logo: "/img/JBU.png",
     price: 45,
     cardClass: "yellow50",
     priceClass: "red",
+    backgroundImageClass: "bg-rome",
   },
   {
     title: "Madrid",
-    discript: "Oct 5-8 <br /> Direct flight 3h 15 min",
-    img: "/img/Rectangle 54.png",
+    discript: "Direct flight 3h 15 min",
+    img: "/img/Rectangle_54.png",
     logo: "/img/DLH.png",
     price: 25,
     cardClass: "yellow50",
     priceClass: "red",
+    backgroundImageClass: "bg-madrid",
   },
   {
     title: "Paris",
-    discript: "Oct 5-8 <br /> Direct flight 3h 15 min",
-    img: "/img/Rectangle 55.png",
+    discript: "Direct flight 3h 15 min",
+    img: "/img/Rectangle_55.png",
     logo: "/img/AFR.png",
     price: 55,
     cardClass: "yellow50",
     priceClass: "red",
+    backgroundImageClass: "bg-paris",
   },
 ];
 const discoverCards = [

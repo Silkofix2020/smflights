@@ -124,26 +124,44 @@ const formattedDate = computed(() => {
   }
 }
 .bg-new-york {
-  background-image: url("/public/img/aurora-kreativ-UN4cs4zNCYo-unsplash.jpg");
+  background-image: url("/public/img/patrick-tomasso-SVVTZtTGyaU-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
 }
 .bg-miami {
-  background-image: url("/public/img/aurora-kreativ-UN4cs4zNCYo-unsplash.png");
+  background-image: url("/public/img/aurora-kreativ-UN4cs4zNCYo-unsplash (1).jpg");
   background-size: cover;
   background-position: center;
 }
 .bg-las-vegas {
-  background-image: url("/public/img/Rectangle54.webp");
+  background-image: url("/public/img/grant-cai-9xjdQ8-zLKI-unsplash.jpg");
   background-size: cover;
   background-position: center;
 }
 .bg-los-angeles {
-  background-image: url("/public/img/Rectangle55.webp");
+  background-image: url("/public/img/linda-pomerantz-zhang-u5ul0b-59-k-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-london {
+  background-image: url("/public/img/Rectangle_52.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-rome {
+  background-image: url("/public/img/Rectangle_53.png");
+  background-size: cover;
+  background-position: center;
+}
+.bg-madrid {
+  background-image: url("/public/img/Rectangle_54.png");
+  background-size: cover;
+  background-position: center;
+}
+.bg-paris {
+  background-image: url("/public/img/Rectangle_55.png");
   background-size: cover;
   background-position: center;
 }

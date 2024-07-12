@@ -28,6 +28,7 @@
           :class="'form-group'"
           @input="() => searchCities('from')"
           v-model="from"
+          required
           >Depart from</UInput
         >
         <ul v-if="showFromSuggestions" class="dropdown">
@@ -57,7 +58,7 @@
           </li>
         </ul>
       </div>
-      <UInput :class="'form-group'" type="date" v-model="departureDate"
+      <UInput :class="'form-group'" type="date" v-model="departureDate" required
         >Departure Date</UInput
       >
       <UInput
