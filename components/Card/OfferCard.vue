@@ -1,6 +1,8 @@
 <template>
   <div :class="cardClass" class="card">
-    <div :class="backgroundImageClass" class="card__img"></div>
+    <div class="card__image-wrapper">
+      <img class="card__image" :src="img" :alt="title" />
+    </div>
     <div class="card__discription">
       <div class="card__text">
         <h3 class="card__title">{{ title }}</h3>
@@ -17,7 +19,7 @@
       </div>
       <div class="card__price">
         <a :disabled="button" href="#" :class="priceClass" class="card__link"
-          >€ {{ price }}</a
+          ><span>{{ currency }}</span> {{ price }}</a
         >
       </div>
     </div>
@@ -37,6 +39,10 @@ const props = defineProps({
   priceClass: String,
   button: Boolean,
   backgroundImageClass: String,
+  currency: {
+    type: String,
+    default: "€",
+  },
 });
 
 // Функция для форматирования даты в нужный формат
@@ -74,15 +80,19 @@ const formattedDate = computed(() => {
   box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.07);
   overflow: hidden;
   &:hover {
-    .card__img {
+    .card__image {
       transform: scale(1.03);
     }
   }
 
-  &__img {
+  &__image {
     width: 100%;
-    max-width: 234px;
+    height: 100%;
     transition: 0.3s;
+    &-wrapper {
+      width: 100%;
+      max-width: 250px;
+    }
   }
   &__item {
     height: 170px;

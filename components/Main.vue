@@ -47,6 +47,7 @@
             :price="card.price"
             :button="card.button"
             :backgroundImageClass="card.backgroundImageClass"
+            :currency="card.currency"
           />
         </div>
       </div>
@@ -103,40 +104,44 @@ const cards = [
   {
     title: "New York",
     discript: "Direct flight 5h 15 min",
-    img: "/img/Rectangle52.png",
+    img: "/img/patrick-tomasso-SVVTZtTGyaU-unsplash.jpg",
     logo: "/airlines/DAL.png",
     price: 35,
     cardClass: "yellow50",
     priceClass: "red",
     button: true,
     backgroundImageClass: "bg-new-york",
+    currency: "$",
   },
   {
     title: "Miami",
     discript: "Direct flight 2h 15 min",
-    img: "/img/Rectangle53.png",
+    img: "/img/aurora-kreativ-UN4cs4zNCYo-unsplash.jpg",
     logo: "/airlines/FFT.png",
     price: 45,
     button: false,
     backgroundImageClass: "bg-miami",
+    currency: "$",
   },
   {
     title: "Las Vegas",
     discript: "Direct flight 4h 15 min",
-    img: "/img/Rectangle54.png",
+    img: "/img/grant-cai-9xjdQ8-zLKI-unsplash.jpg",
     logo: "/airlines/UAL.png",
     price: 25,
     button: false,
     backgroundImageClass: "bg-las-vegas",
+    currency: "$",
   },
   {
     title: "Los Angeles",
     discript: "Direct flight 3h 15 min",
-    img: "/img/Rectangle55.png",
+    img: "/img/linda-pomerantz-zhang-u5ul0b-59-k-unsplash.jpg",
     logo: "/airlines/AAL.png",
     price: 55,
     button: true,
     backgroundImageClass: "bg-los-angeles",
+    currency: "$",
   },
 ];
 
