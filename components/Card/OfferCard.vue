@@ -130,7 +130,7 @@ const formattedDate = computed(() => {
   background-position: center;
 }
 .bg-miami {
-  background-image: url("/public/img/aurora-kreativ-UN4cs4zNCYo-unsplash (1).jpg");
+  background-image: url("/public/img/aurora-kreativ-UN4cs4zNCYo-unsplash.jpg");
   background-size: cover;
   background-position: center;
 }
