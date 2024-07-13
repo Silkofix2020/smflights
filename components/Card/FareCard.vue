@@ -8,9 +8,9 @@
         Text us and save $30 EXTRA: code SMFL30
       </div>
       <div class="flare-card__price">
-        <span class="flare-card__price--old">$815</span>
+        <span class="flare-card__price--old">$467</span>
         <div class="flare-card__price--actual">
-          <span class="flare-card__price--currancy">$</span>467<span
+          <span class="flare-card__price--currancy">$</span>137<span
             class="flare-card__price--article"
             >*</span
           >
@@ -22,7 +22,7 @@
       </div>
     </div>
     <a href="https://wa.me/79935910334" target="_blank" class="flare-card__link"
-      >Text us</a
+      >Text US</a
     >
   </div>
 </template>

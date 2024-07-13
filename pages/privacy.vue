@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div v-html="policyMarkdown" class="privacy__content"></div>
+  <ContentDoc :path="`/policy`" class="privacy__content"></ContentDoc>
   <Footer />
 </template>
 
@@ -22,18 +22,6 @@ useHead({
         "SmFlights privacy policy, our privacy policy rules, Privacy policy, personal information, privacy protection, secure information, personal data collection policy",
     },
   ],
-});
-
-const policyMarkdown = ref("");
-
-onMounted(async () => {
-  const response = await fetch("static/policy.md");
-  if (response.ok) {
-    const markdownText = await response.text();
-    policyMarkdown.value = marked(markdownText);
-  } else {
-    policyMarkdown.value = "Error loading policy file.";
-  }
 });
 </script>
 

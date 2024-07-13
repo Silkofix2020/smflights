@@ -55,7 +55,7 @@ const sendToGoogleSheets = async () => {
 </script>
 <style lang="scss">
 .result__hero {
-  height: 500px;
+  height: 580px;
   @media (max-width: 760px) {
     height: auto;
   }
@@ -66,6 +66,11 @@ const sendToGoogleSheets = async () => {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  &__fare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__title {
     text-align: center;
     color: #ffffff;

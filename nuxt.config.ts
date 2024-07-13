@@ -41,6 +41,13 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/image",
   ],
+  content: {
+    markdown: {
+      remarkPlugins: [],
+      rehypePlugins: [],
+      anchorLinks: false, // Отключить якорные ссылки
+    },
+  },
   gtag: {
     id: "G-453R0PVPBW",
     config: {

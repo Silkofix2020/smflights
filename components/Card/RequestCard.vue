@@ -30,10 +30,14 @@
         <UInput :class="'form-group full-width'" v-model="clientEmail"
           >E-mail</UInput
         >
-        <UInput :class="'form-group grid-group'" v-model="clientPhone"
-          >Phone</UInput
-        >
-        <UInput :class="'form-group grid-group'" v-model="clientName"
+        <div class="group full-width">
+          <CSelect v-model="phoneCode" />
+          <UInput :class="'form-group full-width'" v-model="clientPhone"
+            >Phone</UInput
+          >
+        </div>
+
+        <UInput :class="'form-group full-width'" v-model="clientName"
           >Your Name</UInput
         >
         <UButton class="submit-button full-width" type="submit"
@@ -60,40 +64,45 @@ import { useFormStore } from "../store/formStore";
 import UInput from "../Input/UInput.vue";
 import UButton from "../Button/UButton.vue";
 import LoadCycle from "../animation/LoadCycle.vue";
+import CSelect from "../Input/CSelect.vue";
 
 const formStore = useFormStore();
 const clientEmail = ref("");
 const clientPhone = ref("");
+const phoneCode = ref("");
 const clientName = ref("");
 const router = useRouter();
 const isLoading = ref(false);
 
+const sendTime = ref("");
 watch(
-  [clientEmail, clientPhone, clientName],
-  ([newClientEmail, newClientPhone, newClientName]) => {
+  [clientEmail, phoneCode, clientPhone, clientName],
+  ([newClientEmail, newPhoneCode, newClientPhone, newClientName]) => {
     formStore.updateField("clientEmail", newClientEmail);
-    formStore.updateField("clientPhone", newClientPhone);
+    formStore.updateField("clientPhone", `${newPhoneCode}${newClientPhone}`);
     formStore.updateField("clientName", newClientName);
   }
 );
 
 const sendToGoogleSheets = async () => {
   try {
+    const formData = {
+      flightType: formStore.flightType,
+      from: formStore.from,
+      to: formStore.to,
+      departureDate: formStore.departureDate,
+      returnDate: formStore.returnDate,
+      adults: formStore.adults,
+      children: formStore.children,
+      infants: formStore.infants,
+      clientEmail: formStore.clientEmail,
+      clientPhone: formStore.clientPhone,
+      clientName: formStore.clientName,
+      sendTime: sendTime.value, // Используем значение из ref
+    };
     const response = await $fetch("/api/sendToGoogleSheets", {
       method: "POST",
-      body: {
-        flightType: formStore.flightType,
-        from: formStore.from,
-        to: formStore.to,
-        departureDate: formStore.departureDate,
-        returnDate: formStore.returnDate,
-        adults: formStore.adults,
-        children: formStore.children,
-        infants: formStore.infants,
-        clientEmail: formStore.clientEmail,
-        clientPhone: formStore.clientPhone,
-        clientName: formStore.clientName,
-      },
+      body: formData,
     });
 
     console.log("Data sent successfully:", response);
@@ -106,6 +115,7 @@ const sendToGoogleSheets = async () => {
 const handleSubmit = async (event) => {
   event.preventDefault();
   isLoading.value = true;
+  sendTime.value = new Date().toISOString(); // Обновляем дату и время отправки перед отправкой данных
 
   await sendToGoogleSheets();
 
@@ -113,6 +123,10 @@ const handleSubmit = async (event) => {
     router.push("/success");
   }, 2000);
 };
+
+onMounted(() => {
+  console.log(sendTime.value);
+});
 </script>
 
 <style lang="scss">
@@ -181,5 +195,9 @@ const handleSubmit = async (event) => {
   & input {
     width: 100%;
   }
+}
+.group {
+  display: flex;
+  gap: 5px;
 }
 </style>

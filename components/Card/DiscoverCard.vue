@@ -1,13 +1,17 @@
 <template>
   <div class="discover-card">
-    <div :class="backgroundImageClass" class="discover-card__bg"></div>
+    <div class="discover-card__img">
+      <img class="discover-card__item" :src="bgImg" alt="" />
+      <div v-if="maskShow" class="mask"></div>
+    </div>
     <div class="discover-card__content">
       <h2 class="discover-card__title">{{ title }}</h2>
       <p class="discover-card__text">
         {{ text }}
       </p>
-      <a href="" class="discover-card__link">
+      <NuxtLink class="discover-card__link" :to="pageLink">
         <svg
+          v-if="isAvailable"
           width="15"
           height="14"
           viewBox="0 0 15 14"
@@ -19,7 +23,13 @@
             fill="#A4A4A4"
           />
         </svg>
-      </a>
+        <svg v-else xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            fill="#A4A4A4"
+            d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm0-2h12V10H6zm6-3q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6zM6 20V10z"
+          />
+        </svg>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -33,6 +43,15 @@ const props = defineProps({
   text: String,
   bgImg: String,
   class: String,
+  pageLink: String,
+  maskShow: {
+    type: Boolean,
+    default: false,
+  },
+  isAvailable: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const backgroundImageClass = computed(() => {
@@ -60,7 +79,8 @@ const backgroundImageClass = computed(() => {
     }
   }
 
-  &__bg {
+  &__img {
+    position: relative;
     width: 100%;
     height: 165px;
     background-size: cover;
@@ -75,6 +95,11 @@ const backgroundImageClass = computed(() => {
     &-2 {
       background-image: url("/public/img/Rectangle 65.png");
     }
+  }
+  &__item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
   }
   &__content {
     display: flex;
@@ -93,9 +118,17 @@ const backgroundImageClass = computed(() => {
     line-height: 16px;
   }
   &__link {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     align-self: flex-end;
   }
+}
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.3);
 }
 </style>

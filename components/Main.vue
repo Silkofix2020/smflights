@@ -65,6 +65,9 @@
             :title="discoverCard.title"
             :text="discoverCard.text"
             :bgImg="discoverCard.bgImg"
+            :pageLink="discoverCard.pageLink"
+            :maskShow="discoverCard.maskShow"
+            :isAvailable="discoverCard.isAvailable"
           />
         </div></div
     ></UContainer>
@@ -190,21 +193,30 @@ const cheap = [
 const discoverCards = [
   {
     index: 0,
-    title: "Latest travel restrictions",
-    text: "We provide information on the entry requirements for all countries so you can plan your flight smoothly",
-    bgImg: "/img/Rectangle 63.png",
+    title: "How can SM Flights offer such cheap flights?",
+    text: "Unlocking the Secrets to SM Flights' Affordable Airfare",
+    bgImg: "/img/viktor-forgacs-1jhykJUftOc-unsplash.jpg",
+    pageLink: "/longread/how-sm-flights-offers-cheap-flights",
+    maskShow: false,
+    isAvailable: true,
   },
   {
     index: 1,
-    title: "Install our mobile app",
-    text: "Our mobile app provides real-time information when you are at the airport",
-    bgImg: "/img/Rectangle 64.png",
+    title: "Coming Soon",
+    text: "Exciting new content is on the way. Stay tuned!",
+    bgImg: "/img/blue-sky-plane-taking-off-260nw-1779337220.jpg",
+    pageLink: "",
+    maskShow: true,
+    isAvailable: false,
   },
   {
     index: 2,
-    title: "The most beautiful destinations",
-    text: "Have you ever considered visiting Easter Island or Alaska? These are the most unique destinations in 2022",
-    bgImg: "/img/Rectangle 65.png",
+    title: "Coming Soon",
+    text: "Exciting new content is on the way. Stay tuned!",
+    bgImg: "/img/blue-sky-plane-taking-off-260nw-1779337220.jpg",
+    pageLink: "",
+    maskShow: true,
+    isAvailable: false,
   },
 ];
 </script>

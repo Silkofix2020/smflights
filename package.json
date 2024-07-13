@@ -20,6 +20,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "axios": "^1.7.2",
     "date-fns": "^3.6.0",
+    "flag-icons": "^7.2.3",
     "marked": "^13.0.0",
     "nuxt": "^3.12.2",
     "nuxt-gtag": "^2.0.6",
