@@ -263,14 +263,18 @@ const countries = ref([
 ]);
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import "flag-icons/css/flag-icons.min.css";
 
 .custom-select-wrapper {
   position: relative;
-  width: 100px;
+  width: 90px;
   cursor: pointer;
   user-select: none;
+
+  @media (max-width: 760px) {
+    width: 130px;
+  }
 }
 
 .custom-select {

@@ -1,12 +1,11 @@
 <template>
-  <Header />
-  <ContentDoc :path="`/policy`" class="privacy__content"></ContentDoc>
-  <Footer />
+  <UContainer>
+    <ContentDoc :path="`/policy`" class="page__content"></ContentDoc>
+  </UContainer>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import { marked } from "marked";
+import UContainer from "~/components/Container/UContainer.vue";
 
 useHead({
   title: "SmFlights: Privacy Policy",
@@ -26,37 +25,7 @@ useHead({
 </script>
 
 <style lang="scss">
-.privacy__content {
-  width: 100%;
-  max-width: 1108px;
-  margin: 0 auto;
-  padding: 20px;
-  color: #7e7e7e;
-  &__table {
-    width: 100%;
-    overflow: auto;
-  }
-}
-.privacy__content h1,
-.privacy__content h2,
-.privacy__content h3,
-.privacy__content h4,
-.privacy__content h5,
-.privacy__content h6 {
-  margin: 5px 0;
-  color: #000000;
-}
-table {
-  width: 100%;
-  max-width: 1108px;
-  border-collapse: collapse;
-}
-th,
-td {
-  border: 1px solid black;
-  padding: 10px;
-  text-align: left;
-  width: 33.33%;
-  vertical-align: top;
+.content__table {
+  overflow-x: auto;
 }
 </style>

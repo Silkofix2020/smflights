@@ -7,7 +7,8 @@
 <style lang="scss">
 .loader {
   position: absolute;
-  right: 10px;
+  top: 8px;
+  right: 65px;
   width: 25px;
   height: 25px;
   border: 4px solid #ccc;

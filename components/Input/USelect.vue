@@ -114,7 +114,7 @@ const totalPassengers = computed(
 .passenger-selector {
   position: relative;
   width: 100%;
-  max-width: 170px;
+  max-width: 160px;
   height: 39px;
   font-size: 14px;
   padding: 8px 0 8px 10px;

@@ -1,7 +1,5 @@
 <template>
-  <Header />
   <Main />
-  <Footer />
 </template>
 <script setup>
 useHead({

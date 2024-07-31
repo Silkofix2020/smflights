@@ -1,16 +1,21 @@
+---
+title: "Privacy Policy"
+description: "Learn about our privacy practices, including how we collect, use, and protect your personal information at SM Flights. Your privacy is our priority."
+---
+
 # Welcome to ITN’s Privacy Policy
 
 _Effective January 1st, 2024_
 
 ITN (“ITN”, “we”, “our”, “us”) respects your privacy and is committed to protecting your personal information. This policy describes ITN practices regarding personally identifiable information or personal data (“personal information/ PI”). This policy applies to our websites, applications, email, voice calls and text messages, and social media accounts(the “Platforms”). When you use the Platforms, you agree to the terms in this policy.
 
-## PURPOSE OF THIS PRIVACY POLICY
+### PURPOSE OF THIS PRIVACY POLICY
 
 This privacy policy aims to give you information on how ITN collects and processes your PI, including any PI you may provide through the Platforms, when you purchase a product or service or sign up to our newsletter.
 
 It is important that you read this privacy policy together with any other privacy policy, notice or fair processing policy we may provide on specific occasions, when we are collecting or processing PI about you, so that you are fully aware of how and why we are using your PI. This privacy policy supplements other notices and privacy policies and is not intended to override them.
 
-## CONTACT DETAILS
+### CONTACT DETAILS
 
 ITN is the company (business) responsible for your PI.
 
@@ -20,17 +25,17 @@ Full name of legal entity: International Travel Network, LLC
 
 Email address: [privacy@smflights.com](mailto:privacy@smflights.com)
 
-## POLICY AMENDMENTS
+### POLICY AMENDMENTS
 
 We keep our privacy policy under regular review updating it at least once in 12 months. ITN might make minor amendments to this Privacy policy which shall not adversely affect your privacy, except if laws set otherwise. In case of material changes ITN will definitely publish such amendments and amended policy on our website and, as far as possible, notify you either by email or by pop-up windows when you are using our Platforms next time. Amendments shall enter into force on the Effective Date. Actual version of the Privacy policy is published on our website.
 
-## DATA ACCURACY
+### DATA ACCURACY
 
 When you give us PI, you are telling us, that the information is true, accurate, complete and current. You are also telling us, that you have the authorization to provide it to us
 
 It is important that the PI we hold about you is accurate and current. Please keep us informed, if your PI changes during your relationship with us.
 
-## THE CATEGORIES OF PERSONAL INFORMATION WE COLLECT
+### THE CATEGORIES OF PERSONAL INFORMATION WE COLLECT
 
 We may collect, use, store and transfer different kinds of PI about you which we have grouped together as follows:
 
@@ -46,15 +51,15 @@ We also collect, use and share Aggregated Data such as statistical or demographi
 **Customer support** If you choose to contact our customer support services we will collect any inquires, complaint or other information that you may submit to our support team.
 We do not collect any Special Categories of PI about you (this includes details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership, information about your health, and genetic and biometric data). Nor do we collect any information about criminal convictions and offences.
 
-## CHILDREN
+### CHILDREN
 
 ITN does not knowingly collect PI from minors, except if the minor is one of travelers. If we become aware that a minor is attempting to submit PI, we will remove this information from our records. If you are the parent/legal guardian of a minor who has given us PI, please contact us so we can delete it.
 
-## IF YOU FAIL TO PROVIDE PERSONAL INFORMATION
+### IF YOU FAIL TO PROVIDE PERSONAL INFORMATION
 
 Where we collect PI required by law or under the terms of a contract, and you fail to provide that PI when requested, we may not be able to perform the contract we have or are trying to enter into with you (for example, to provide you with goods or services). In this case, we may have to cancel a product or service you have with us, but we will notify you if this is the case at the time.
 
-## HOW WE COLLECT YOUR PERSONAL INFORMATION
+### HOW WE COLLECT YOUR PERSONAL INFORMATION
 
 We use different methods to collect PI from and about you including through:  
 **PI you give to us** We collect your PI directly from you (using life chat, online forms or via voice call/ messenger). Any contact data (emails, phones etc.) provided by you throughout any interaction will be treated as your personal contacts and saved in your profile for future communications, unless specifically requested not to be stored (one-time communication only). For example, when you provide us with your PI by requesting a quote, registering or booking travels, contacting our customer support. This includes PI you provide when you:
@@ -69,7 +74,7 @@ One of the main collection methods are VOICE CALLS We have vested interest to en
 **PI we collect passively** We also collect your PI passively. For example, we collect information about you over time and across different Websites when you visit the Platform. We also use tracking tools like cookies and beacons. As you interact with our Platforms, we will automatically collect Network Activity Information about your equipment, browsing actions and patterns. We collect this PI by using cookies and other similar technologies. For additional information, please, refer to our [Cookie policy](#cookies). Platform features may make use of your device attributes and settings that will allow us to determine your physical location (country, state). Such technologies may include IP address mapping or other technologies. We use this information to enhance and personalize your experience and provide you with offers and services that may be of interest to you. ITN does not have control over your device settings, but we do recommend enabling location services on your device so you can take advantage of the location based features and functionality offered.  
 **PI we receive from service providers:** We collect your PI using service providers. This can include when you log in using a service provider platform, such as Facebook. In addition, we also integrate service providers' software that collects information about users for security reasons. The categories of PI ITN has collected/disclosed/sold for a business purpose in the preceding 12 months you can find here:
 
-### CATEGORIES OF PI COLLECTED/ DISCLOSED/SOLD
+#### CATEGORIES OF PI COLLECTED/ DISCLOSED/SOLD
 
 ITN might disclose PI to service providers and third parties for a business purpose or when we receive valuable services from third parties.
 
@@ -116,7 +121,7 @@ ITN might disclose PI to service providers and third parties for a business purp
   </tr>
 </table>
 
-## FOR WHAT PURPOSE WE USE YOUR PERSONAL INFORMATION
+### FOR WHAT PURPOSE WE USE YOUR PERSONAL INFORMATION
 
 We will use your PI for the following purposes:  
 **Improving our services** To provide you and improve our Platforms and services, to better understand the users of our Platforms and services, and to protect our property and to prevent damage to them.  
@@ -148,15 +153,15 @@ To communicate with you, including as follows:
 
 <div class="content__table"><table><tbody><tr><th><p><strong>Purpose</strong></p></th><th><p><strong>Activity</strong></p></th><th><p><strong>Category of PI</strong></p></th></tr><tr><td rowspan="2"><p>To Complete the transaction, provide a service requested by you or otherwise perform a contract (ticket purchase; car rental; hotel booking etc.)</p></td><td><p>To register you as a new or a Regular customer / to start a business relationship</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Audio/Electronic information</li></ol></td></tr><tr><td><p>To process and deliver your order including:<br>(a) Managing payments, fees and charges<br>(b) Collecting and recovering money owed to us<br>(c) Providing to you post-sale customer support</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Commercial Information</li><li>Inferences</li><li>Audio/Electronic information</li></ol></td></tr><tr><td rowspan="4"><p>For solely internal uses that are based on your relationship with us or compatible with the context in which PI was collected</p></td><td><p>To manage our relationship with you which will include:<br>(a) Notifying you about changes to our terms or privacy policy<br>(b) Asking you to leave a review or take a survey<br>(c) Sending holiday greetings</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Inferences</li><li>Audio/Electronic information</li></ol></td></tr><tr><td><p>To deliver relevant Platform content and advertisements to you and measure or understand the effectiveness of the advertising we serve to you</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Commercial Information</li><li>Network Activity Information</li><li>Inferences</li></ol></td></tr><tr><td><p>To use data analytics to improve our Platforms, products/services, marketing, customer relationships and experiences</p></td><td><ol><li>Network Activity Information</li></ol></td></tr><tr><td><p>To make suggestions and recommendations to you about goods or services that may be of interest to you</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Commercial Information</li><li>Network Activity Information</li><li>Inferences</li></ol></td></tr><tr><td><p>To detect security incidents, protect against malicious, deceptive, fraudulent, or illegal activity</p></td><td><p>To administer and protect our business and Platforms (including troubleshooting, data analysis, testing, system maintenance, support, reporting and hosting of data)</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Network Activity Information</li><li>Audio/Electronic information</li></ol></td></tr><tr><td><p>To identify and repair errors that impair existing intended functionality</p></td><td><p>To administer and protect our business and Platforms (including troubleshooting, data analysis, testing, system maintenance, support, reporting and hosting of data)</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Network Activity Information</li><li>Audio/Electronic information</li></ol></td></tr><tr><td><p>To comply with a legal obligation</p></td><td><p>(a) To manage tax matters;<br>(b) Bookkeeping and accountancy of transactions;<br>(c) To manage consolidated reports and annual financial reports;&nbsp;<br>(d) To comply with the requirements of licenses, registrations and permissions obtained by ITN, including industry standards (airline safety rules, PCI DSS etc.);<br>(e)&nbsp;to comply with law &nbsp;requirements&nbsp;(e.g.&nbsp;<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32004L0082">EU&nbsp;</a>,&nbsp;<a href="https://www.cbp.gov/travel/travel-industry-personnel/advance-passenger-information-system">USA</a>,&nbsp;<a href="https://www.cbsa-asfc.gc.ca/security-securite/api_ipv-eng.html">Canada</a>,&nbsp;<a href="https://assets.publishing.service.gov.uk/media/5a74cfe4ed915d3c7d528266/CarrierInformation.pdf">UK</a>&nbsp;etc.) &nbsp;of improving border controls (security) and combating illegal immigration.</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Commercial Information</li><li>Audio/Electronic information</li></ol></td></tr><tr><td><p>To exercise or defend legal claims</p></td><td><p>(a) To manage complaints<br>(b) To comply with requests, subpoenas and other enforcement notices issued by regulators, courts and law enforcement agencies<br>(c) To protect and exercise legal claims of ITN before court, authority or law enforcement agency</p></td><td><ol><li>Identifiers</li><li>Contact Data</li><li>Commercial Information</li><li>Network Activity Information</li><li>Inferences</li><li>Audio / Electronic information</li><li>Geolocation data</li></ol></td></tr></tbody></table></div>
 
-## CHANGE OF PURPOSE
+### CHANGE OF PURPOSE
 
 We will only use your PI for the purposes for which we collected it, unless we reasonably consider that we need to use it for another reason and that reason is compatible with the original purpose. If you wish to get an explanation as to how the processing for the new purpose is compatible with the original purpose, please contact us.
 
-## YOUR CHOICES
+### YOUR CHOICES
 
 As a customer-oriented business we respect and value your expectations. As a result, you are able to make announcements and queries at any time regarding your concerns in privacy matters. Each of our marketing email has an opt-out button and you can change preferences or unsubscribe at all from such communication at any time. Each ITN website is targeted to the current audience and region, therefore subscribe/unsubscribe options are also different. You cannot unsubscribe from servicing emails and administrative messages.
 
-## HOW WE SHARE YOUR PERSONAL INFORMATION
+### HOW WE SHARE YOUR PERSONAL INFORMATION
 
 **Corporate affiliates and change of control** We may share your PI with our corporate affiliates and if ITN itself (or part of its business) is sold or otherwise changes control, owners would have access to your PI for the uses set out herein.
 
@@ -176,21 +181,21 @@ We enter into confidentiality and PI processing terms with partners to ensure th
 
 We may also share anonymous aggregated usage information with others.
 
-## HOW WE STORE AND PROTECT YOUR PERSONAL INFORMATION
+### HOW WE STORE AND PROTECT YOUR PERSONAL INFORMATION
 
 Our servers and data centers are located in the U.S and our service providers may be located there and in other countries. By providing us PI, you agree that your PI may be transferred to and stored in these countries. These countries may have different and/or less stringent privacy/data protection and data security rules than those of your own country. As a result, your PI may be subject to access requests from governments, courts, or law enforcement in those countries according to laws in those countries. Subject to the applicable laws of such countries, we will provide the necessary safeguards to maintain protections of your PI, e.g. by obtaining from the PI recipients contractual commitments based on the EU model clauses. ITN has a security program intended to keep the PI stored in our systems protected from unauthorized access and misuse. Our systems are configured with data encryption, or scrambling technologies and firewalls constructed to industry standards. We also use Secure Socket Layer (SSL) technology that protects the PI you send over the Internet. PI may only be accessed by persons within our organizations, or our service providers to carry out the uses indicated in this Privacy Policy. We have put in place appropriate security measures to prevent your PI from being accidentally lost, used or accessed in an unauthorised way, altered or disclosed. In addition, we limit access to your PI to those employees, agents, contractors and other service providers who have a business need to know. They will only process your PI on our instructions and they are subject to a duty of confidentiality. We have put in place procedures to deal with any suspected PI breach and will notify you and any applicable regulator of a breach where we are legally required to do so.
 
-## RETENTION PERIODS
+### RETENTION PERIODS
 
 We will only retain your PI for as long as reasonably necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting or reporting requirements. We may retain your PI for a longer period in the event of a complaint or if we reasonably believe there is a prospect of litigation in respect to our relationship with you.
 
 To determine the appropriate retention period for PI, we consider the amount, nature and sensitivity of the PI, the potential risk of harm from unauthorised use or disclosure of your PI, the purposes for which we process your PI and whether we can achieve those purposes through other means, and the applicable legal, regulatory, tax, accounting or other requirements.
 
-## OTHER WEBSITES
+### OTHER WEBSITES
 
 If you click through to third party websites or other platforms, ITN’s privacy policy does not apply.
 
-## REQUESTS AND COMPLAINTS
+### REQUESTS AND COMPLAINTS
 
 Under certain circumstances set by applicable law, you are entitled to:
 
@@ -211,13 +216,13 @@ Due to the remote nature of our services, it is important for us to keep communi
 **TERMS:** We try to respond to all legitimate requests within one month. Occasionally it could take us longer than a month if your request is particularly complex or you have made a number of requests. In this case, we will notify you and keep you updated. The maximum response time shall not exceed 90 days.  
 **CONTACTS:** you can submit your complaint/ request to DPO email (see above).
 
-## HOW ITN RESPONDS TO “DO NOT TRACK” SIGNALS
+### HOW ITN RESPONDS TO “DO NOT TRACK” SIGNALS
 
 Some browsers have a “Do Not Track” feature that lets you tell websites that you do not want to have your online activities tracked. These features are not yet uniform, so we are not currently set up to respond to those signals.
 
 <a name="cookies"></a>
 
-## ITN COOKIE POLICY
+### ITN COOKIE POLICY
 
 Cookies is a small piece of data sent from Platform and stored on your device (computer, smartphone etc.) by your [web browser](https://en.wikipedia.org/wiki/Web_browser"%20\t%20"_blank) while you are browsing our Platforms and sometimes down the line <sup>[1](https://www.asaptickets.com/privacy"%20\l%20"cookieModal)</sup>Without Cookies it would be impossible to provide you information and services you are requesting through the Internet. Cookies remember stateful information (such as items added in the shopping cart in an online store) or record your browsing activity. They can also be used to remember arbitrary pieces of information that the user previously entered into form fields such as names, addresses, passwords and billing address.
 
@@ -225,7 +230,7 @@ By using the Platforms, you agree to the use of any of the cookies and tracking 
 
 Additional information about cookie purposes can be found [here](https://cookiepedia.co.uk/"%20\t%20"_blank) or you can send a [request](https://www.asaptickets.com/privacy"%20\l%20"a16) to us.
 
-## CATEGORIES OF COOKIES USED BY ITN
+### CATEGORIES OF COOKIES USED BY ITN
 
 **Technical and strictly necessary Cookies** In most cases our Platforms use cookies in order to ensure technical feasibility to connect our Platform with your device and provide services requested by you. This cookies is integrated by default into our Platforms. In case, you try to block/ turn off any of such cookies you might not receive some essential part of services, requested by you. Some examples of such cookies are:
 
@@ -252,7 +257,7 @@ In case we are collecting Cookies for statistical purposes, we are committed to 
 
 We and our advertising partners may also use web beacons (single pixel GIF images). These web beacons are placed in the code of a Web page or an email newsletter. When you access a partner site within our mobile applications, we may track your activity on that site.
 
-## OPT-OUT FROM COOKIES
+### OPT-OUT FROM COOKIES
 
 Your browser gives you the ability to control cookies. How to do this varies from browser to browser. You should view the Help menu on the browser you use for further information. Your opt out choice is stored in opt out cookies only in that browser, so you should separately set your preferences for other browsers, computers, or devices you may use. If your browser blocks cookies, your opt out preferences may not be effective. Deleting browser cookies can remove your opt out preferences, so you should visit this page periodically to review your preferences. If you block or delete cookies or opt out of online behavioral advertising, not all of the tracking that we have described in this policy will stop.
 Please also note that opting out of a third party cookie does not mean that you will no longer receive or be subject to online advertising or marketing. It means that the third party service from which you opted out will no longer deliver ads tailored to your web preferences and online behavioral. You may also opt out of third party cookies by visiting opt-out website like [www.aboutads.info](http://www.aboutads.info/choices/) or [https://cookies.insites.com/disable-cookies/](https://cookies.insites.com/disable-cookies)

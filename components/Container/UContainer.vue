@@ -15,6 +15,7 @@ const props = defineProps({
   margin: 0 auto;
   width: 100%;
   max-width: 1108px;
+  padding: 20px 10px;
 
   @media (max-width: 760px) {
     padding: 0 10px;

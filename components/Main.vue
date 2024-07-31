@@ -53,47 +53,15 @@
       </div>
     </UContainer>
     <UContainer>
-      <div class="discover">
-        <div class="some__header">
-          <h3 class="some__title">Discover</h3>
-        </div>
-        <div class="discover__cards">
-          <DiscoverCard
-            v-for="discoverCard in discoverCards"
-            :key="discoverCard.index"
-            :index="discoverCard.index"
-            :title="discoverCard.title"
-            :text="discoverCard.text"
-            :bgImg="discoverCard.bgImg"
-            :pageLink="discoverCard.pageLink"
-            :maskShow="discoverCard.maskShow"
-            :isAvailable="discoverCard.isAvailable"
-          />
-        </div></div
+      <div class="advantages">
+        <AdvantagesCard
+          v-for="item in advantages"
+          :image="item.image"
+          :title="item.title"
+          :description="item.description"
+          :imageAlt="item.imageAlt"
+        /></div
     ></UContainer>
-    <UContainer>
-      <div class="some">
-        <div class="some__header">
-          <div class="some__title-group">
-            <h3 class="some__title">Cheap flights selected for you</h3>
-          </div>
-        </div>
-        <div class="some__cards">
-          <OfferCard
-            v-for="cheap in cheap"
-            :key="cheap.title"
-            :title="cheap.title"
-            :discript="cheap.discript"
-            :img="cheap.img"
-            :logo="cheap.logo"
-            :price="cheap.price"
-            :cardClass="cheap.cardClass"
-            :priceClass="cheap.priceClass"
-            :backgroundImageClass="cheap.backgroundImageClass"
-          />
-        </div>
-      </div>
-    </UContainer>
   </main>
 </template>
 
@@ -219,6 +187,35 @@ const discoverCards = [
     isAvailable: false,
   },
 ];
+const advantages = [
+  {
+    title: "Travel worldwide",
+    description:
+      "Get flight deals with the best airlines to travel anywhere in the world.",
+    image: "/img/advantages/img-0.svg",
+    imageAlt: "plane",
+  },
+  {
+    title: "Hot deals in your pocket",
+    description:
+      "Receive real-time quotes and price-drop alerts from SM Flights.",
+    image: "/img/advantages/img-1.svg",
+    imageAlt: "sale",
+  },
+  {
+    title: "100% secure payment",
+    description:
+      "With our safe booking and payment system your data security is guaranteed.",
+    image: "/img/advantages/img-2.svg",
+    imageAlt: "secure",
+  },
+  {
+    title: "One-stop solution",
+    description: "Easy to use. No ads.Tailored customer service.",
+    image: "/img/advantages/img-3.svg",
+    imageAlt: "24/7",
+  },
+];
 </script>
 
 <style lang="scss">
@@ -232,7 +229,7 @@ const discoverCards = [
     align-items: center;
     gap: 20px;
     color: #ffffff;
-    padding: 20px 0;
+    padding-bottom: 20px;
     @media (max-width: 450px) {
       text-align: center;
     }
@@ -298,6 +295,19 @@ const discoverCards = [
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+}
+.advantages {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 0;
+  user-select: none;
+
+  @media (max-width: 1001px) {
+    flex-wrap: wrap;
+    row-gap: 20px;
   }
 }
 </style>

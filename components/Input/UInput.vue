@@ -90,7 +90,8 @@ input {
     outline-color: #feb47b;
   }
   @media (max-width: 760px) {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
   }
 }
 

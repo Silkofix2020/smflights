@@ -23,55 +23,76 @@
       </div>
     </div>
     <div class="form-wrapper">
-      <div>
-        <UInput
-          :class="'form-group'"
-          @input="() => searchCities('from')"
-          v-model="from"
-          required
-          >Depart from</UInput
-        >
-        <ul v-if="showFromSuggestions" class="dropdown">
-          <li
-            v-for="suggestion in fromSuggestions"
-            :key="suggestion"
-            @click="selectCity('from', suggestion)"
+      <div class="form-wrapper__fields">
+        <!-- Flight fields -->
+        <div class="form-wrapper__flight">
+          <div class="form-group__wrapper">
+            <UInput
+              :class="'form-group'"
+              @input="() => searchCities('from')"
+              v-model="from"
+              required
+              >Depart from</UInput
+            >
+            <ul v-if="showFromSuggestions" class="dropdown">
+              <li
+                v-for="suggestion in fromSuggestions"
+                :key="suggestion"
+                @click="selectCity('from', suggestion)"
+              >
+                {{ suggestion }}
+              </li>
+            </ul>
+          </div>
+          <div class="form-group__wrapper">
+            <UInput
+              :class="'form-group'"
+              @input="() => searchCities('to')"
+              v-model="to"
+              >Arrive at</UInput
+            >
+            <ul v-if="showToSuggestions" class="dropdown">
+              <li
+                v-for="suggestion in toSuggestions"
+                :key="suggestion"
+                @click="selectCity('to', suggestion)"
+              >
+                {{ suggestion }}
+              </li>
+            </ul>
+          </div>
+          <UInput
+            :class="'form-group'"
+            type="date"
+            v-model="departureDate"
+            required
+            >Departure Date</UInput
           >
-            {{ suggestion }}
-          </li>
-        </ul>
-      </div>
-      <div>
-        <UInput
-          :class="'form-group'"
-          @input="() => searchCities('to')"
-          v-model="to"
-          >Arrive at</UInput
-        >
-        <ul v-if="showToSuggestions" class="dropdown">
-          <li
-            v-for="suggestion in toSuggestions"
-            :key="suggestion"
-            @click="selectCity('to', suggestion)"
+          <UInput
+            :class="'form-group'"
+            type="date"
+            v-model="returnDate"
+            :flightType="flightType"
+            >Return Date</UInput
           >
-            {{ suggestion }}
-          </li>
-        </ul>
+          <USelect v-model="passengerInfo" />
+        </div>
+        <!-- Customer fields -->
+        <div class="form-wrapper__customer">
+          <UInput :class="'form-group'" v-model="clientName">Name</UInput>
+          <UInput :class="'form-group'" v-model="clientEmail">Email</UInput>
+          <div class="form-group__wrapper">
+            <CSelect v-model="phoneCode" />
+            <UInput :class="'form-group'" v-model="clientPhone">Phone</UInput>
+          </div>
+        </div>
       </div>
-      <UInput :class="'form-group'" type="date" v-model="departureDate" required
-        >Departure Date</UInput
-      >
-      <UInput
-        :class="'form-group'"
-        type="date"
-        v-model="returnDate"
-        :flightType="flightType"
-        >Return Date</UInput
-      >
-      <USelect v-model="passengerInfo" />
-      <UButton :disabled="isLoading" class="form-button" @click="handleSubmit">
-        Search Flights
-        <LoadCycle v-if="isLoading"></LoadCycle>
+      <!-- Button field -->
+      <UButton class="form-button" @click="handleSubmit">
+        <span v-if="!isLoading">Send Request</span>
+        <span v-else>
+          <LoadCycle></LoadCycle>
+        </span>
       </UButton>
     </div>
     <p class="form__footnote">
@@ -89,14 +110,13 @@ import UInput from "../Input/UInput.vue";
 import USelect from "../Input/USelect.vue";
 import UButton from "../Button/UButton.vue";
 import LoadCycle from "../animation/LoadCycle.vue";
+import CSelect from "../Input/CSelect.vue";
 
 const formStore = useFormStore();
 const router = useRouter();
 
 const from = ref("");
 const to = ref("");
-const fromCode = ref("");
-const toCode = ref("");
 const departureDate = ref("");
 const returnDate = ref("");
 const flightType = ref("Round-trip");
@@ -105,6 +125,10 @@ const passengerInfo = ref({
   children: 0,
   infants: 0,
 });
+const clientEmail = ref("");
+const clientPhone = ref("");
+const phoneCode = ref("");
+const clientName = ref("");
 const isLoading = ref(false);
 
 const fromSuggestions = ref([]);
@@ -190,7 +214,18 @@ const selectCity = (field, cityWithCode) => {
 };
 
 watch(
-  [flightType, from, to, departureDate, returnDate, passengerInfo],
+  [
+    flightType,
+    from,
+    to,
+    departureDate,
+    returnDate,
+    passengerInfo,
+    clientEmail,
+    phoneCode,
+    clientPhone,
+    clientName,
+  ],
   ([
     newFlightType,
     newFrom,
@@ -198,6 +233,10 @@ watch(
     newDate,
     newReturnDate,
     newPassengerInfo,
+    newClientEmail,
+    newPhoneCode,
+    newClientPhone,
+    newClientName,
   ]) => {
     formStore.updateField("flightType", newFlightType);
     formStore.updateField("from", newFrom);
@@ -207,14 +246,42 @@ watch(
     formStore.updateField("adults", newPassengerInfo.adults);
     formStore.updateField("children", newPassengerInfo.children);
     formStore.updateField("infants", newPassengerInfo.infants);
+    formStore.updateField("clientEmail", newClientEmail);
+    formStore.updateField("clientPhone", `${newPhoneCode}${newClientPhone}`);
+    formStore.updateField("clientName", newClientName);
   }
 );
 
-const handleSubmit = (event) => {
+const sendToGoogleSheets = async () => {
+  try {
+    const formData = {
+      flightType: formStore.flightType,
+      from: formStore.from,
+      to: formStore.to,
+      departureDate: formStore.departureDate,
+      returnDate: formStore.returnDate,
+      adults: formStore.adults,
+      children: formStore.children,
+      infants: formStore.infants,
+      clientEmail: formStore.clientEmail,
+      clientPhone: formStore.clientPhone,
+      clientName: formStore.clientName,
+    };
+    const response = await $fetch("/api/sendToGoogleSheets", {
+      method: "POST",
+      body: formData,
+    });
+  } catch (error) {}
+};
+
+const handleSubmit = async (event) => {
   event.preventDefault();
   isLoading.value = true;
+
+  await sendToGoogleSheets();
+
   setTimeout(() => {
-    router.push("/result");
+    router.push("/success");
   }, 2000);
 };
 </script>
@@ -244,14 +311,44 @@ const handleSubmit = (event) => {
   &-wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
     gap: 5px;
     @media (max-width: 760px) {
       margin: 0 auto;
       flex-direction: column;
       align-items: center;
       gap: 15px;
+    }
+
+    &__fields {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    &__flight {
+      display: flex;
+      justify-content: flex-start;
+      gap: 5px;
+      @media (max-width: 760px) {
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+    &__customer {
+      display: flex;
+      gap: 5px;
+      @media (max-width: 760px) {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
     }
   }
   &__inputs {
@@ -264,6 +361,20 @@ const handleSubmit = (event) => {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    @media (max-width: 760px) {
+      width: 100%;
+      max-width: 300px;
+      align-items: center;
+    }
+
+    &__wrapper {
+      display: flex;
+      gap: 5px;
+      @media (max-width: 760px) {
+        width: 300px;
+        align-items: center;
+      }
+    }
   }
   &-wrapper {
     padding-top: 10px;

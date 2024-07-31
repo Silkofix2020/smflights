@@ -26,7 +26,7 @@ const props = defineProps({
   justify-content: center;
 
   @media (max-width: 760px) {
-    height: 700px;
+    height: 840px;
   }
 }
 </style>

@@ -1,35 +1,26 @@
 <template>
   <header class="header">
-    <div class="wrap">
+    <UContainer class="wrap">
       <NuxtLink class="header__logo" to="/">
-        <div class="header-text__wrapper">
-          <span class="header__logo header__logo--bold">S</span>m
-          <span class="header__logo header__logo--bold">F</span>lights
-        </div>
-        <div class="header-img__wrapper">
-          <img class="header-img__item" src="/img/header-logo.png" alt="" />
-        </div>
+        <Logo />
       </NuxtLink>
       <nav class="header__nav">
         <BurgerMenu />
       </nav>
-    </div>
+    </UContainer>
   </header>
 </template>
 
 <script setup>
 import BurgerMenu from "./BurgerMenu.vue";
+import UContainer from "./Container/UContainer.vue";
 </script>
 
 <style lang="scss">
 .wrap {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1440px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 4px 30px;
 
   @media (max-width: 760px) {
     padding: 4px 18px;
@@ -40,8 +31,7 @@ import BurgerMenu from "./BurgerMenu.vue";
 .header {
   width: 100%;
   color: #fff;
-  text-shadow: 7px 8px 12px rgba(0, 0, 0, 0.21);
-  background-color: #f5f8ff;
+  //text-shadow: 7px 8px 12px rgba(0, 0, 0, 0.21);
 
   &__logo {
     @include nunito-sans;

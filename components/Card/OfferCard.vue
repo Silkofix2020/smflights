@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed, nextTick } from "vue";
 
 const props = defineProps({
   title: String,
@@ -69,7 +69,7 @@ const formattedDate = computed(() => {
 <style lang="scss">
 .card {
   width: 100%;
-  max-width: 548px;
+  max-width: 530px;
   height: 170px;
   display: flex;
   justify-content: space-between;
@@ -79,6 +79,7 @@ const formattedDate = computed(() => {
   border: 1px solid #c2cff0;
   box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.07);
   overflow: hidden;
+  user-select: none;
   &:hover {
     .card__image {
       transform: scale(1.03);
@@ -133,48 +134,7 @@ const formattedDate = computed(() => {
     text-decoration: none;
   }
 }
-.bg-new-york {
-  background-image: url("/public/img/patrick-tomasso-SVVTZtTGyaU-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.bg-miami {
-  background-image: url("/public/img/aurora-kreativ-UN4cs4zNCYo-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.bg-las-vegas {
-  background-image: url("/public/img/grant-cai-9xjdQ8-zLKI-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.bg-los-angeles {
-  background-image: url("/public/img/linda-pomerantz-zhang-u5ul0b-59-k-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.bg-london {
-  background-image: url("/public/img/Rectangle_52.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.bg-rome {
-  background-image: url("/public/img/Rectangle_53.png");
-  background-size: cover;
-  background-position: center;
-}
-.bg-madrid {
-  background-image: url("/public/img/Rectangle_54.png");
-  background-size: cover;
-  background-position: center;
-}
-.bg-paris {
-  background-image: url("/public/img/Rectangle_55.png");
-  background-size: cover;
-  background-position: center;
-}
+
 .yellow50 {
   background-color: #fff8e1;
 }

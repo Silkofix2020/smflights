@@ -13,7 +13,9 @@
         <NuxtLink to="/about" class="header__nav-link">About</NuxtLink>
       </li>
       <li class="header__nav-item">
-        <NuxtLink to="/privacy" class="header__nav-link">Help</NuxtLink>
+        <NuxtLink to="/service-and-contact" class="header__nav-link"
+          >Help</NuxtLink
+        >
       </li>
     </ul>
   </div>
@@ -84,7 +86,7 @@ const toggleMenu = () => {
     right: -18px;
     justify-content: space-around;
     align-items: flex-end;
-    background-color: #f5f8ff;
+    background-color: #fff;
     border-radius: 5px 0 0 5px;
     transition: width 0.3s ease-in-out, padding 0.3s ease-in-out,
       max-height 0.3s ease-in-out;
