@@ -21,18 +21,19 @@ import UContainer from "./Container/UContainer.vue";
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: 760px) {
-    padding: 4px 18px;
-    justify-content: space-between;
-  }
 }
 
 .header {
   width: 100%;
   color: #fff;
-  //text-shadow: 7px 8px 12px rgba(0, 0, 0, 0.21);
-
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.21);
+  & .wrap {
+    padding: 0;
+    @media (max-width: 760px) {
+      padding: 4px 18px;
+      justify-content: space-between;
+    }
+  }
   &__logo {
     @include nunito-sans;
     display: flex;

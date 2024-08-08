@@ -22,7 +22,9 @@ import { onMounted } from "vue";
 import { useRouter } from "#app";
 
 import AnimatedDots from "~/components/animation/AnimatedDots.vue";
-
+definePageMeta({
+  layout: "nocontent",
+});
 useHead({
   title: "Success",
   meta: [{ name: "description", content: "Thank you! We will call you soon!" }],

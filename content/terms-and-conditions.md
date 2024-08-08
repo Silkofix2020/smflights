@@ -3,6 +3,8 @@ title: "Terms and Conditions"
 description: "Review the terms and conditions for using our services at SM Flights. Understand your rights and responsibilities when accessing our site."
 ---
 
+## Terms and Conditions
+
 ### Introduction
 
 Welcome to SMFlights.com. By accessing and using this website, you agree to comply with and be bound by the following terms and conditions. These terms apply to all users of the website. If you do not agree with these terms, you should not use this website.

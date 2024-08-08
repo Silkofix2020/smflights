@@ -22,11 +22,12 @@
         </p>
       </div>
       <div class="footer__payments">
-        <img
+        <NuxtImg
           v-for="item in paymentSystems"
           class="footer__payments-item"
+          format="webp"
           :src="`${item.logo}`"
-          alt=""
+          alt="payment system"
         />
       </div>
     </UContainer>
@@ -98,6 +99,10 @@ const paymentSystems = [
 
     &-item {
       width: 80px;
+
+      @media (max-width: 764px) {
+        width: 60px;
+      }
     }
   }
   &__info {

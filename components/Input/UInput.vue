@@ -49,7 +49,7 @@ const props = defineProps({
   },
   required: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   customClass: String,
   errorMessage: String,

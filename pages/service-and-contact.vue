@@ -279,11 +279,19 @@ onMounted(() => {
       padding: 5px;
       flex-direction: row;
     }
+    @media (max-width: 400px) {
+      padding: 5px;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__item {
     width: max-content;
     padding: 20px 0;
     cursor: pointer;
+    @media (max-width: 400px) {
+      padding: 5px;
+    }
 
     &-active {
       font-weight: bold;

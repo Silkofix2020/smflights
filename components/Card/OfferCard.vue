@@ -105,6 +105,11 @@ const formattedDate = computed(() => {
     padding: 22px 0 0 20px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 764px) {
+      flex-direction: column;
+      padding: 10px;
+    }
   }
   &__text {
     display: flex;

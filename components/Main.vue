@@ -6,19 +6,6 @@
           <h2 class="book-cta__title">
             Book cheap flights and save up to 50% OFF
           </h2>
-
-          <div class="book-cta__advantages">
-            <div class="book-cta__item">
-              <span class="book-cta__item--gold">30+</span> quotes in seconds
-            </div>
-            <div class="book-cta__item">
-              <span class="book-cta__item--gold">$287+</span> savings on each
-              ticket
-            </div>
-            <div class="book-cta__item">
-              <span class="book-cta__item--gold">100%</span> free service
-            </div>
-          </div>
         </div>
 
         <div class="book__wrapper">
@@ -33,7 +20,9 @@
             <h3 class="some__title">Traveling from your location</h3>
             <h4 class="some__subtitle">round trip - one passenger</h4>
           </div>
-          <a href="#" class="some__link">Explore more destinations</a>
+          <div class="some__item">
+            <a href="#" class="some__link">Explore more destinations</a>
+          </div>
         </div>
 
         <div class="some__cards">
@@ -275,14 +264,16 @@ const advantages = [
     align-items: center;
     padding-bottom: 11px;
   }
+  &__item {
+    text-align: right;
+  }
   &__link {
     text-decoration: none;
     color: #041bd7;
   }
   &__title {
-    font-weight: 500;
-    font-size: 16px;
     color: #4e4e4e;
+    font-size: 20px;
   }
   &__subtitle {
     font-weight: 300;

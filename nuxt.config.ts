@@ -81,6 +81,9 @@ export default defineNuxtConfig({
       routes: ["/"],
     },
   },
+  image: {
+    format: ["webp"],
+  },
   css: ["~/assets/styles/main.scss"],
   vite: {
     css: {

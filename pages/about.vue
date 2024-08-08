@@ -16,6 +16,7 @@
           <p class="how-it-works__item-text">{{ item.text }}</p>
         </div>
       </div>
+      <HorizontLine />
     </div>
     <div class="long-read">
       <ContentDoc
@@ -78,14 +79,24 @@ const howItWorks = [
   gap: 20px;
   margin-bottom: 50px;
 
+  @media (max-width: 764px) {
+    flex-direction: column;
+  }
+
   &__item {
     width: 300px;
+    @media (max-width: 764px) {
+      width: 100%;
+    }
   }
   &__image {
     width: 100%;
   }
   &__content {
     width: 70%;
+    @media (max-width: 764px) {
+      width: 100%;
+    }
   }
 }
 .how-it-works {
@@ -98,6 +109,12 @@ const howItWorks = [
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @media (max-width: 764px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
   }
   &__item {
     width: 30%;
@@ -106,6 +123,10 @@ const howItWorks = [
     align-items: center;
     gap: 20px;
     text-align: center;
+    @media (max-width: 764px) {
+      width: 100%;
+      gap: 15px;
+    }
 
     &-image {
       width: 96px;
@@ -117,6 +138,21 @@ const howItWorks = [
       align-items: center;
       justify-content: center;
       color: #ff6f00;
+    }
+  }
+}
+.long-read {
+  &__content {
+    @media (max-width: 764px) {
+      margin-bottom: 15px;
+    }
+    & p {
+      margin-bottom: 15px;
+    }
+    @media (max-width: 764px) {
+      & h3 {
+        margin-bottom: 10px;
+      }
     }
   }
 }

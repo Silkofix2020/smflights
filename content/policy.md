@@ -3,7 +3,7 @@ title: "Privacy Policy"
 description: "Learn about our privacy practices, including how we collect, use, and protect your personal information at SM Flights. Your privacy is our priority."
 ---
 
-# Welcome to ITN’s Privacy Policy
+## Welcome to ITN’s Privacy Policy
 
 _Effective January 1st, 2024_
 
